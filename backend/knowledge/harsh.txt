@@ -1,0 +1,103 @@
+# Harsh Jaiswal — Professional Knowledge Base
+
+## Personal Info
+Name: Harsh Jaiswal
+Role: Full Stack Developer and AI/ML Enthusiast
+Email: harshjaiswal497@gmail.com
+Phone: 8210506058
+Location: Open to relocate anywhere in India
+GitHub: github.com/HarshJaiswal497
+
+## Education
+Institution: B.P. Poddar Institute of Management and Technology (BPPIMT), Kolkata
+Degree: B.Tech in Computer Science and Engineering
+Duration: September 2022 to May 2026
+GPA: 9.24 out of 10.00
+Achievement: Overall B.Tech Topper for 3 consecutive years at BPPIMT
+Courses: Data Structures, Algorithms, DBMS, Object-Oriented Programming, System Design
+
+## Work Experience
+
+### Cognizant Full Stack Developer Intern — Feb 2026 to May 2026
+Technologies: Java, Spring Boot, Angular, Microservices
+- Built a microservices-based e-commerce application with Spring Boot and Angular
+- Developed individual services: catalog, cart, order, payment, customer engagement
+- Used Eureka service discovery, API Gateway, and centralized authentication
+- Applied Spring Security, Resilience4j circuit breaker, and Spring Actuator for health checks
+- Gained hands-on GenAI and Agentic AI experience through structured Cognizant training program
+- Worked on LLM integration, RAG pipelines, and prompt engineering during training
+- Collaborated with Cognizant ACE team mentors on full-stack AI engineering concepts
+
+## Projects
+
+### Personal AI Chatbot — 2026 (Current)
+Tech: Python, FastAPI, LangChain, ChromaDB, Groq API, Angular, sentence-transformers
+- Built a RAG-powered chatbot that represents Harsh professionally to recruiters
+- Implemented confidence gating — bot refuses to hallucinate below 0.45 similarity threshold
+- Streaming responses via Server-Sent Events for ChatGPT-style word-by-word output
+- Human-in-the-loop feedback loop — gap questions auto-flagged, answered from dashboard, bot re-learns
+- JD Matcher feature — paste any job description, get MATCH/PARTIAL/GAP analysis with evidence
+- JWT-protected private dashboard with analytics and gap question management
+- Rate limiting (30 req/min) to prevent API abuse
+- Deployed backend on Render, frontend on Vercel — fully production-grade
+
+### AI-Based Symptom Diagnosis System — 2026
+Tech: Python, Scikit-learn, Pandas, SHAP, Random Forest, NumPy
+- Disease prediction system trained on 246,000+ medical records
+- Achieved 92% prediction accuracy using Random Forest classifier
+- Feature engineering: fuzzy matching for symptom names, synonym mapping
+- Explainable AI: integrated SHAP values to show symptom-level contribution to each diagnosis
+- Handled class imbalance, missing data, and multi-label classification challenges
+
+### Employee Directory — Scalable Multi-Architecture — 2025
+Tech: AWS EC2, Lambda, API Gateway, DynamoDB, S3, Elastic Load Balancer, Auto Scaling
+- Cloud-native employee directory showcasing two AWS architectures side-by-side
+- EC2-based system: Elastic Load Balancer, Auto Scaling Groups, health checks
+- Serverless re-architecture: AWS Lambda + DynamoDB + S3 for zero-infrastructure management
+- Compared cost, performance, and scalability trade-offs between both architectures
+- Demonstrated deep understanding of cloud-native design patterns
+
+## Technical Skills
+
+### Programming Languages
+Java, Python, SQL, JavaScript, TypeScript
+
+### Frontend
+Angular 17, HTML5, CSS3, SCSS, Bootstrap, TypeScript, RxJS, Angular Router, Angular Guards
+
+### Backend
+Spring Boot, FastAPI, REST APIs, Microservices Architecture, JPA/Hibernate, JWT Authentication, Spring Security, Resilience4j, Spring Actuator, API Gateway, Eureka Service Discovery
+
+### AI / ML / GenAI
+Machine Learning, Random Forest, Decision Trees, SHAP Explainable AI, LLM Prompting, Prompt Engineering, Generative AI, Agentic AI, RAG (Retrieval-Augmented Generation), LangChain, ChromaDB, Vector Embeddings, sentence-transformers, Groq API
+
+### Cloud
+AWS EC2, AWS Lambda, AWS API Gateway, Amazon S3, Amazon DynamoDB, Elastic Load Balancer, Auto Scaling Groups, Oracle Cloud Infrastructure (OCI)
+
+### DevOps & Tools
+Docker (basics), CI/CD basics, Git, GitHub, Postman, Swagger/OpenAPI, JUnit, Mockito, Figma, VS Code, IntelliJ IDEA
+
+## Certifications
+- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate (September–October 2025)
+- DevOps on AWS Specialization — 4 courses (December 2024 – March 2025)
+
+## Competitive Programming & Achievements
+- McKinsey Forward Program: Selected for global leadership and problem-solving program run by McKinsey & Company
+- B.Tech Overall Topper for 3 consecutive years at BPPIMT (GPA 9.24/10)
+- 800+ LeetCode problems solved — strong DSA foundation
+- 300+ GeeksforGeeks problems solved
+- Active competitive programmer with consistent practice in arrays, graphs, DP, trees, and system design
+
+## What Harsh Is Looking For
+- AI-native full stack engineering roles that combine backend engineering with LLM/AI systems
+- Teams building RAG pipelines, agentic AI workflows, and LLM-integrated products
+- High-impact, client-facing technical roles where both coding and communication matter
+- Open to work from any Cognizant office location across India
+- Target role: Cognizant ACE Full Stack AI Engineer (12 LPA / 18 LPA)
+
+## Soft Skills & Strengths
+- Strong communicator — explains technical concepts clearly to non-technical stakeholders
+- Self-learner — built full-stack AI projects independently without a team
+- Detail-oriented — GPA of 9.24 demonstrates consistent academic rigour
+- Fast learner — went from zero GenAI knowledge to building production RAG systems in weeks
+- Leadership potential — selected for McKinsey Forward global leadership program

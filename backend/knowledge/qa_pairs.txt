@@ -1,0 +1,63 @@
+# Explicit Q&A Pairs — Common Recruiter Questions
+# These dramatically improve accuracy for predictable questions.
+# Format: Q: ... / A: ... (blank line between pairs)
+
+Q: What is your GPA?
+A: Harsh has a GPA of 9.24 out of 10.00 in B.Tech Computer Science and Engineering at BPPIMT, Kolkata. He is the overall B.Tech topper for 3 consecutive years.
+
+Q: Do you know Angular?
+A: Yes, Harsh has strong Angular experience. During his Cognizant internship he built a full e-commerce frontend using Angular 17 with TypeScript, component-based architecture, two-way data binding, reactive forms, Angular Router, and lazy loading. He is also building this personal chatbot's frontend entirely in Angular.
+
+Q: Do you know Spring Boot?
+A: Yes, Harsh built a complete microservices-based e-commerce backend using Spring Boot during his Cognizant internship. He implemented multiple services (catalog, cart, order, payment, customer engagement), API Gateway, Eureka service discovery, Spring Security for JWT auth, and Resilience4j for circuit breaking.
+
+Q: Do you know Java?
+A: Yes, Java is Harsh's primary backend language. He used Java with Spring Boot to build microservices at Cognizant. He has strong understanding of OOP, design patterns, collections, and exception handling in Java.
+
+Q: Do you know Python?
+A: Yes, Harsh uses Python for AI/ML and backend development. He built an AI disease prediction system in Python using Scikit-learn, Pandas, and SHAP, and is building the FastAPI backend for this chatbot in Python.
+
+Q: What cloud experience do you have?
+A: Harsh has hands-on AWS experience from his Employee Directory project — he built and compared an EC2-based architecture (with ELB and Auto Scaling) against a serverless architecture (Lambda + DynamoDB + S3). He also holds the Oracle Cloud Infrastructure AI Foundations Associate certification from 2025.
+
+Q: Have you worked with AI or machine learning?
+A: Yes. Harsh built an AI symptom diagnosis system achieving 92% accuracy using Random Forest on 246,000+ records with SHAP explainability. He also has GenAI and Agentic AI experience from Cognizant training, and has built a full RAG pipeline using LangChain, ChromaDB, and Groq from scratch.
+
+Q: Do you know RAG?
+A: Yes — Harsh built this chatbot using RAG (Retrieval-Augmented Generation). He implemented the full pipeline: embedding with sentence-transformers (all-MiniLM-L6-v2), vector storage in ChromaDB, semantic retrieval with cosine similarity scoring, confidence gating at 0.45 threshold, and LLM generation via llama-3.1-8b-instant. He can explain every component of the pipeline in detail.
+
+Q: Do you know LangChain?
+A: Yes. Harsh used LangChain for RAG orchestration in this personal chatbot project. He understands document loaders, text splitters, vector store integration, prompt templates, and LLM chains. He chose LangChain as it is the industry standard for building LLM applications.
+
+Q: What is your notice period or joining availability?
+A: Harsh is a 2026 B.Tech graduate completing his degree in May 2026. He can join immediately after graduation with zero notice period required.
+
+Q: Are you open to relocate?
+A: Yes, Harsh is fully open to relocating to any city in India. He is specifically open to any Cognizant office location.
+
+Q: Do you have any certifications?
+A: Yes — Harsh holds the Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate certification, and the DevOps on AWS Specialization (4-course series) from Coursera completed between December 2024 and March 2025.
+
+Q: How many LeetCode problems have you solved?
+A: Harsh has solved 800+ LeetCode problems and 300+ GeeksforGeeks problems, demonstrating strong data structures and algorithms skills across arrays, graphs, dynamic programming, trees, and system design.
+
+Q: What microservices have you built?
+A: During his Cognizant internship, Harsh built five microservices for an e-commerce platform: catalog service (product listings), cart service, order service, payment service, and customer engagement service. He connected them via Eureka service discovery and an API Gateway, with centralized JWT-based authentication and Resilience4j circuit breaking.
+
+Q: What is your target salary or CTC?
+A: Harsh is targeting the Cognizant ACE Full Stack AI Engineer role at 12 LPA or 18 LPA depending on the band.
+
+Q: Tell me about yourself.
+A: Harsh Jaiswal is a B.Tech Computer Science graduate from BPPIMT Kolkata with a 9.24 GPA and 3-year topper status. He is a full stack developer with a strong AI/ML focus — he has built microservices backends in Spring Boot, Angular frontends, RAG pipelines using LangChain and ChromaDB, and ML models achieving 92% accuracy. He completed a Cognizant internship where he gained GenAI and Agentic AI experience. He has 800+ LeetCode solutions, two cloud certifications, and was selected for the McKinsey Forward global leadership program. He is looking for an AI-native full stack engineering role and is open to relocating anywhere in India.
+
+Q: What is your biggest strength?
+A: Harsh's biggest strength is being a fast, self-directed learner who builds real things. He went from zero GenAI experience to building a production-grade RAG chatbot with streaming, JWT auth, auto-ingestion, and full deployment — independently. His 9.24 GPA alongside 800+ competitive programming problems shows he can handle both theory and practical implementation.
+
+Q: What projects have you built?
+A: Harsh has built three notable projects: (1) A Personal AI Chatbot — a RAG-powered system using FastAPI, LangChain, ChromaDB, Groq, and Angular with streaming, JD matching, and auto-learning from gap questions. (2) An AI Symptom Diagnosis System — 92% accuracy disease prediction using Random Forest on 246,000 records with SHAP explainability. (3) An Employee Directory on AWS — comparing EC2+ELB+Auto Scaling vs serverless Lambda+DynamoDB architectures.
+
+Q: Do you have experience with Docker or DevOps?
+A: Harsh has foundational Docker and CI/CD knowledge. He holds the DevOps on AWS Specialization certification (4 courses) covering CodePipeline, CodeBuild, CodeDeploy, and infrastructure automation. He understands containerization concepts and CI/CD pipelines and is actively deepening this area.
+
+Q: What makes you a good fit for the ACE team?
+A: Harsh combines the three things the ACE team needs: strong full stack engineering (Angular + Spring Boot + FastAPI), hands-on AI/ML and GenAI experience (RAG, LangChain, LLM prompting, Agentic AI), and the communication skills to work with clients. His 9.24 GPA, McKinsey Forward selection, and independent project portfolio show he can learn fast, build independently, and handle high-stakes environments.

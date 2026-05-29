@@ -1,0 +1,3 @@
+
+Q: Tell me about TechGranny.
+A: TechGranny is a digital literacy mobile application developed to help senior citizens learn smartphone and internet skills. It uses voice guidance, step-by-step tutorials, and a senior-friendly interface to make technology easier to understand. The app also supports custom lessons uploaded by caregivers, enabling personalized learning for elderly users.
