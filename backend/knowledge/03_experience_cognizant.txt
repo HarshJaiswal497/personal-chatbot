@@ -1,0 +1,112 @@
+# Cognizant Full Stack Developer Internship
+
+Company:
+Cognizant
+
+Role:
+Full Stack Developer Intern
+
+Duration:
+February 2026 – May 2026
+
+Team Size:
+5 Members
+
+Technologies:
+Java 17, Spring Boot 3, Angular 21, Spring Cloud, MySQL, Microservices, JWT, Resilience4j, Razorpay, Eureka, OpenFeign
+
+Overview:
+
+During his internship at Cognizant, Harsh worked on a production-grade fashion e-commerce platform called RunWay. The project was built using a microservices architecture and served as a practical implementation of modern enterprise application development practices.
+
+The internship also included structured training on Generative AI and Agentic AI, covering LLM fundamentals, prompt engineering, and AI application development.
+
+Primary Responsibilities:
+
+Backend:
+
+* Designed and implemented Eureka Service Discovery.
+* Built and configured API Gateway.
+* Developed the Catalog Service.
+* Designed product management APIs.
+* Implemented inventory management APIs.
+* Implemented media-related APIs.
+* Participated in service integration and testing.
+
+Frontend:
+
+* Developed the Home Page.
+* Developed the Category Page.
+* Built Admin Dashboard pages.
+* Built Seller Dashboard pages.
+* Built Support Dashboard pages.
+* Implemented Angular Route Guards.
+* Implemented JWT Interceptor.
+* Developed multiple UI components across the application.
+
+Additional Learning:
+Although Harsh primarily owned the Catalog Service and frontend modules, he also learned the architecture and implementation details of:
+
+* Order Service
+* Payment Service
+* Notification Service
+
+Architecture:
+
+The application consisted of:
+
+* Auth Service
+* Catalog Service
+* Order Service
+* Payment Service
+* Engagement Service
+* API Gateway
+
+Each service maintained its own dedicated MySQL database.
+
+Technical Highlights:
+
+* Eureka Service Discovery
+* API Gateway
+* OpenFeign Inter-Service Communication
+* JWT Authentication
+* Role-Based Access Control (RBAC)
+* Resilience4j Circuit Breakers
+* Razorpay Payment Integration
+* Swagger Documentation
+* Spring Security
+
+Scale:
+
+The platform exposed more than 80 APIs across different services.
+
+Biggest Technical Challenge:
+
+The biggest challenge faced by the team was maintaining consistency across multiple services during distributed transactions.
+
+For example:
+An order could involve inventory updates, order creation, and payment processing across separate databases.
+
+Solution:
+
+The team implemented the Saga Orchestration Pattern.
+
+The Order Service acted as the orchestrator and coordinated actions across Catalog and Payment services.
+
+If any step failed, compensating actions were executed automatically to restore consistency.
+
+Key Learnings:
+
+* Enterprise Microservices Architecture
+* Distributed Transactions
+* Saga Pattern
+* API Gateway Design
+* Service Discovery
+* Secure Authentication
+* Frontend and Backend Integration
+* Large-Scale Project Collaboration
+* Production-Oriented Development Practices
+
+Impact on Career:
+
+The Cognizant internship strengthened Harsh's understanding of enterprise software engineering and significantly accelerated his transition from academic projects to production-grade system design.

@@ -1,0 +1,677 @@
+# JD Evidence Mapping
+
+=================================================
+SKILL: JAVA
+===========
+
+Level:
+Advanced
+
+Evidence:
+
+* Cognizant Full Stack Developer Internship
+* RunWay Fashion E-Commerce Platform
+* E-Commerce REST API Backend
+* 1100+ DSA Problems
+
+Concepts Used:
+
+* OOP
+* Collections
+* Exception Handling
+* Streams
+* Multithreading Fundamentals
+* REST APIs
+* Spring Ecosystem
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: SPRING BOOT
+==================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* E-Commerce REST API Backend
+* Cognizant Internship
+
+Concepts Used:
+
+* REST APIs
+* Spring Security
+* JWT
+* JPA/Hibernate
+* OpenFeign
+* Eureka
+* API Gateway
+* Resilience4j
+* Swagger
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: MICROSERVICES
+====================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* Cognizant Internship
+
+Concepts Used:
+
+* Service Discovery
+* API Gateway
+* OpenFeign
+* Distributed Transactions
+* Saga Orchestration
+* Database-per-Service Pattern
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: DISTRIBUTED SYSTEMS
+==========================
+
+Level:
+Intermediate to Advanced
+
+Evidence:
+
+* RunWay
+
+Concepts Used:
+
+* Saga Pattern
+* Service Communication
+* Event Flow Design
+* Fault Tolerance
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: ANGULAR
+==============
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* Personal AI Chatbot
+* Cognizant Internship
+
+Features Used:
+
+* Angular 21
+* Signals
+* RxJS
+* Lazy Loading
+* Route Guards
+* JWT Interceptor
+* Standalone Components
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: TYPESCRIPT
+=================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* Personal AI Chatbot
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: JAVASCRIPT
+=================
+
+Level:
+Advanced
+
+Evidence:
+
+* Angular Projects
+* React Projects
+* GameHub
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: REACT
+============
+
+Level:
+Intermediate
+
+Evidence:
+
+* GameHub
+
+Features Used:
+
+* React Query
+* Context API
+* Custom Hooks
+
+Confidence:
+Medium to High
+
+---
+
+=================================================
+SKILL: FASTAPI
+==============
+
+Level:
+Advanced
+
+Evidence:
+
+* Personal AI Chatbot
+
+Concepts Used:
+
+* REST APIs
+* Authentication
+* Dependency Injection
+* Middleware
+* Rate Limiting
+* Streaming Responses
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: PYTHON
+=============
+
+Level:
+Intermediate to Advanced
+
+Evidence:
+
+* Personal AI Chatbot
+* AI Symptom Diagnosis System
+
+Libraries:
+
+* FastAPI
+* Scikit-learn
+* Pandas
+* NumPy
+* SHAP
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: SQL
+==========
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* E-Commerce Backend
+* Academic Coursework
+
+Databases:
+
+* MySQL
+
+Concepts Used:
+
+* Joins
+* Indexing
+* Normalization
+* Relationships
+* Query Optimization
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: MYSQL
+============
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* E-Commerce Backend
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: DATABASE DESIGN
+======================
+
+Level:
+Advanced
+
+Evidence:
+
+* E-Commerce Backend
+* RunWay
+
+Concepts Used:
+
+* ER Design
+* Relationships
+* Normalization
+* Indexing
+* Schema Design
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: REST APIs
+================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay (80+ APIs)
+* E-Commerce Backend (15+ APIs)
+* Personal AI Chatbot
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: JWT AUTHENTICATION
+=========================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* E-Commerce Backend
+* Personal AI Chatbot
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: SPRING SECURITY
+======================
+
+Level:
+Advanced
+
+Evidence:
+
+* RunWay
+* E-Commerce Backend
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: AI / MACHINE LEARNING
+============================
+
+Level:
+Intermediate to Advanced
+
+Evidence:
+
+* Personal AI Chatbot
+* AI Symptom Diagnosis System
+* OCI AI Certification
+
+Concepts:
+
+* ML Models
+* Explainable AI
+* Embeddings
+* Prompt Engineering
+* RAG
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: GENERATIVE AI
+====================
+
+Level:
+Intermediate to Advanced
+
+Evidence:
+
+* Personal AI Chatbot
+* OCI AI Foundations Associate
+* Cognizant GenAI Training
+
+Concepts:
+
+* LLMs
+* Prompt Engineering
+* RAG
+* Vector Databases
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: RAG
+==========
+
+Level:
+Advanced
+
+Evidence:
+
+* Personal AI Chatbot
+
+Concepts:
+
+* Chunking
+* Embeddings
+* ChromaDB
+* Retrieval
+* Context Injection
+* Confidence Gating
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: VECTOR DATABASES
+=======================
+
+Level:
+Intermediate
+
+Evidence:
+
+* Personal AI Chatbot
+
+Tools:
+
+* ChromaDB
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: PROMPT ENGINEERING
+=========================
+
+Level:
+Intermediate
+
+Evidence:
+
+* Personal AI Chatbot
+* OCI AI Certification
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: AWS
+==========
+
+Level:
+Intermediate
+
+Evidence:
+
+* Employee Directory Project
+* DevOps on AWS Specialization
+
+Services:
+
+* EC2
+* Lambda
+* API Gateway
+* DynamoDB
+* S3
+* ELB
+* Auto Scaling
+* CloudWatch
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: CLOUD COMPUTING
+======================
+
+Level:
+Intermediate
+
+Evidence:
+
+* AWS Project
+* OCI Certification
+* Render Deployment
+* Vercel Deployment
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: DEVOPS
+=============
+
+Level:
+Intermediate
+
+Evidence:
+
+* DevOps on AWS Specialization
+* Docker Knowledge
+* Git
+* CI/CD Concepts
+* Flyway
+
+Confidence:
+Medium to High
+
+---
+
+=================================================
+SKILL: DOCKER
+=============
+
+Level:
+Beginner to Intermediate
+
+Evidence:
+
+* DevOps Learning
+* Deployment Knowledge
+
+Confidence:
+Medium
+
+---
+
+=================================================
+SKILL: GIT
+==========
+
+Level:
+Advanced
+
+Evidence:
+
+* All Projects
+* Team Collaboration During Internship
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: DSA
+==========
+
+Level:
+Advanced
+
+Evidence:
+
+* 800+ LeetCode Problems
+* 300+ GeeksforGeeks Problems
+
+Total:
+1100+ Problems Solved
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: FLUTTER
+==============
+
+Level:
+Intermediate
+
+Evidence:
+
+* TechGranny
+
+Features:
+
+* Firebase
+* Flutter TTS
+* Mobile UI
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: FIREBASE
+===============
+
+Level:
+Intermediate
+
+Evidence:
+
+* TechGranny
+
+Services:
+
+* Authentication
+* Firestore
+* Storage
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: LEADERSHIP
+=================
+
+Evidence:
+
+* McKinsey Forward Program
+* Team Projects
+* Internship Collaboration
+* NSS Activities
+
+Confidence:
+High
+
+---
+
+=================================================
+SKILL: COMMUNICATION
+====================
+
+Evidence:
+
+* McKinsey Forward
+* Project Presentations
+* Team Collaboration
+* NSS Activities
+
+Confidence:
+High

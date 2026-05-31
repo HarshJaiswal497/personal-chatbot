@@ -1,0 +1,213 @@
+Q: Tell me about yourself.
+
+A: I am Harsh Jaiswal, a final-year Computer Science and Engineering student at B.P. Poddar Institute of Management and Technology with a GPA of 9.24 and the distinction of being the overall B.Tech topper for three consecutive years. I have experience in Full Stack Development, AI/ML, Cloud Computing, and Generative AI through projects, certifications, and my internship at Cognizant. I enjoy building impactful products and continuously learning new technologies.
+
+---
+
+Q: Why should we hire you?
+
+A: I bring a combination of strong academics, practical project experience, and a proven ability to learn quickly. I have worked on Full Stack applications, AI-powered systems, cloud projects, and enterprise microservices. I adapt quickly, enjoy solving problems, and can contribute while continuously improving my skills.
+
+---
+
+Q: What are your strengths?
+
+A: My biggest strengths are learning agility, adaptability, problem-solving, and discipline. I can learn new technologies quickly and apply them to practical projects. I am also comfortable working independently and in teams.
+
+---
+
+Q: What is your biggest weakness?
+
+A: I enjoy learning many technologies, which sometimes causes me to spread my attention too broadly. To improve this, I prioritize my learning goals and focus on developing deeper expertise while still exploring new technologies in a structured way.
+
+---
+
+Q: Tell me about a failure.
+
+A: Early in my placement journey, I was rejected in the final round of an interview process. It was disappointing, but it taught me the importance of communication, confidence, and interview preparation. Since then, I have continuously improved both my technical and interpersonal skills.
+
+---
+
+Q: How do you handle rejection?
+
+A: I treat rejection as feedback rather than failure. I analyze what could have been improved, identify skill gaps, and use the experience to prepare better for future opportunities.
+
+---
+
+Q: Tell me about a challenge you faced.
+
+A: One significant challenge was implementing distributed transactions in the RunWay microservices project. Traditional transactions could not be used across multiple databases, so we implemented Saga Orchestration to maintain consistency while preserving service independence.
+
+---
+
+Q: Describe a situation where you learned something quickly.
+
+A: While building my Personal AI Chatbot, I had to learn Python, FastAPI, RAG, vector databases, embeddings, and LLM integration in a relatively short time. I studied the concepts, built prototypes, and gradually integrated them into a complete working system.
+
+---
+
+Q: How do you manage your time?
+
+A: I prioritize tasks based on deadlines and importance. During examinations, I focus more on academics, while during lighter academic periods I dedicate time to projects, certifications, and coding practice. This approach helped me maintain a 9.24 GPA while working on multiple initiatives.
+
+---
+
+Q: How do you prioritize tasks?
+
+A: I classify tasks based on urgency and impact. High-priority tasks with deadlines receive immediate attention, while long-term goals are broken into smaller milestones.
+
+---
+
+Q: Tell me about a time you worked in a team.
+
+A: During my Cognizant internship, I worked in a team of five members on the RunWay e-commerce platform. My responsibilities included the Eureka Server, API Gateway, Catalog Service, and several Angular modules. We collaborated closely and coordinated service integrations to deliver the project successfully.
+
+---
+
+Q: How do you handle disagreements in a team?
+
+A: I focus on understanding the reasoning behind different viewpoints, discuss technical trade-offs objectively, and work toward solutions that best serve the project's goals.
+
+---
+
+Q: What role do you usually take in a team?
+
+A: I often take ownership of technical implementation tasks while also contributing to collaboration and knowledge sharing.
+
+---
+
+Q: Describe a time when you took ownership.
+
+A: During the chatbot project, I was responsible for the complete architecture, implementation, testing, and improvement process. I independently learned several new technologies and delivered a working solution.
+
+---
+
+Q: How do you deal with pressure?
+
+A: I break large problems into smaller tasks, focus on one issue at a time, and prioritize execution rather than worrying about the overall complexity.
+
+---
+
+Q: Tell me about a difficult technical problem.
+
+A: Distributed transactions in RunWay were particularly challenging because order creation, inventory updates, and payments involved separate databases. We solved the issue using Saga Orchestration and compensation mechanisms.
+
+---
+
+Q: How do you learn new technologies?
+
+A: I learn best through building. I start with fundamentals, create small prototypes, then gradually apply the technology in real projects.
+
+---
+
+Q: What motivates you?
+
+A: Continuous improvement motivates me. I enjoy learning, solving problems, building useful products, and becoming a better version of myself professionally and personally.
+
+---
+
+Q: Why do you want a career in technology?
+
+A: Technology allows people to solve real-world problems at scale. Projects such as TechGranny and my Personal AI Chatbot reinforced my belief that software can create meaningful impact.
+
+---
+
+Q: What are your long-term goals?
+
+A: I want to become an engineer capable of designing and building complex software systems, contribute to impactful products, mentor junior developers, and continue growing in AI and software engineering.
+
+---
+
+Q: What type of work environment do you prefer?
+
+A: I prefer environments that encourage learning, ownership, collaboration, innovation, and technical excellence.
+
+---
+
+Q: Are you comfortable with relocation?
+
+A: Yes. I am open to relocating anywhere in India for the right opportunity.
+
+---
+
+Q: Why are your academics so strong?
+
+A: I maintain a structured schedule and prioritize tasks based on importance. Consistency and disciplined time management helped me balance academics, projects, coding practice, and internships.
+
+---
+
+Q: How do you balance academics and projects?
+
+A: During academic peaks, I focus on coursework and examinations. During breaks and lighter periods, I dedicate more time to projects, certifications, and competitive programming.
+
+---
+
+Q: What accomplishment are you most proud of?
+
+A: Becoming the overall B.Tech topper for three consecutive years while simultaneously building projects, solving over 1100 coding problems, and completing internships and certifications.
+
+---
+
+Q: What project are you most proud of?
+
+A: Technically, RunWay and my Personal AI Chatbot are my strongest projects. Personally, TechGranny is the project I am most proud of because it addresses a meaningful social challenge.
+
+---
+
+Q: What do you do outside of technology?
+
+A: I enjoy reading self-help books, listening to music, sketching, and working on personal growth.
+
+---
+
+Q: What books have influenced you?
+
+A: Ikigai and Don't Believe Everything You Feel. Both emphasize self-awareness, purpose, and continuous improvement.
+
+---
+
+Q: How would your teammates describe you?
+
+A: Curious, reliable, hardworking, adaptable, and always willing to learn.
+
+---
+
+Q: How do you respond to feedback?
+
+A: I value constructive feedback because it helps me improve. I try to understand the feedback objectively and apply it to future work.
+
+---
+
+Q: Tell me about a time you helped someone.
+
+A: During project work and coding preparation, I frequently helped classmates understand technical concepts, debug issues, and prepare for interviews.
+
+---
+
+Q: What differentiates you from other candidates?
+
+A: My combination of academic excellence, practical project experience, AI knowledge, Full Stack development skills, and willingness to continuously learn and adapt.
+
+---
+
+Q: Why should a company invest in you?
+
+A: Because I am committed to long-term growth, learn quickly, take ownership of challenges, and continuously improve my skills while contributing to team success.
+
+---
+
+Q: Describe yourself in three words.
+
+A: Curious, disciplined, and adaptable.
+
+---
+
+Q: What does success mean to you?
+
+A: Success means continuous growth, meaningful impact, and becoming a better version of myself while helping others through the products and systems I build.
+
+---
+
+Q: Where do you see yourself in five years?
+
+A: As a skilled software engineer working on impactful products, contributing to complex systems, mentoring others, and continuing to grow in Full Stack and AI engineering.

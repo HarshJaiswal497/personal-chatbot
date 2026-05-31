@@ -1,0 +1,133 @@
+# Project: Scalable Employee Directory - Multi-Architecture AWS Deployment
+
+Project Type:
+Cloud Architecture and AWS Deployment Project
+
+Team Size:
+Individual Project
+
+Duration:
+2025
+
+Platform:
+AWS Learning Environment
+
+Deployment Environment:
+AWS Sandbox Environment
+
+Objective:
+
+Compare traditional cloud deployment architecture with modern serverless architecture and evaluate cost, scalability, and operational complexity.
+
+Technologies:
+
+AWS Services:
+
+Traditional Architecture:
+
+* EC2
+* Elastic Load Balancer (ELB)
+* Auto Scaling
+
+Serverless Architecture:
+
+* AWS Lambda
+* API Gateway
+* DynamoDB
+* Amazon S3
+
+Monitoring:
+
+* CloudWatch
+
+Overview:
+
+The Employee Directory application stores and retrieves employee information.
+
+The project focused less on application complexity and more on deployment architecture design.
+
+Architecture 1:
+Traditional Infrastructure
+
+Components:
+
+Users
+↓
+Load Balancer
+↓
+EC2 Instances
+↓
+Employee Directory Application
+
+Features:
+
+* Auto Scaling
+* Health Checks
+* Fault Tolerance
+* Load Distribution
+
+Benefits:
+
+* High control
+* Flexible customization
+
+Challenges:
+
+* Higher operational overhead
+* Infrastructure management required
+
+Architecture 2:
+Serverless Architecture
+
+Components:
+
+Users
+↓
+API Gateway
+↓
+Lambda
+↓
+DynamoDB
+
+Static Assets:
+S3
+
+Benefits:
+
+* No server management
+* Automatic scaling
+* Lower operational complexity
+
+Evaluation Methodology:
+
+Performed:
+
+* Stress Testing
+* Load Testing
+* Cost Analysis
+
+Metrics Compared:
+
+* Availability
+* Scalability
+* Operational Complexity
+* Infrastructure Cost
+
+Results:
+
+The serverless architecture achieved more than 40% infrastructure cost reduction while maintaining equivalent functionality and availability.
+
+Key Learnings:
+
+* AWS Cloud Services
+* Elastic Load Balancing
+* Auto Scaling
+* Serverless Computing
+* Cost Optimization
+* Cloud Architecture Design
+* Performance Evaluation
+* Scalability Planning
+
+Why This Project Matters:
+
+This project strengthened Harsh's understanding of cloud architecture trade-offs and taught him how different deployment strategies affect cost, scalability, and operational complexity.

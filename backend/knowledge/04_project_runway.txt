@@ -1,0 +1,229 @@
+# Project: RunWay - Fashion E-Commerce Platform
+
+Project Type:
+Enterprise Full Stack Microservices Application
+
+Organization:
+Cognizant Internship Project
+
+Team Size:
+5 Members
+
+Role:
+Full Stack Developer
+
+Duration:
+February 2026 – May 2026
+
+Tech Stack:
+
+Backend:
+
+* Java 17
+* Spring Boot 3
+* Spring Security
+* Spring Cloud Gateway
+* Eureka Service Discovery
+* OpenFeign
+* JPA/Hibernate
+* JWT Authentication
+* Resilience4j
+* Swagger/OpenAPI
+* MySQL
+
+Frontend:
+
+* Angular 21
+* TypeScript
+* Angular Signals
+* RxJS
+* Standalone Components
+* Lazy Loading
+* Route Guards
+* JWT Interceptor
+
+Payments:
+
+* Razorpay
+
+Architecture:
+
+* Microservices Architecture
+* Saga Orchestration Pattern
+
+Overview:
+
+RunWay is a production-grade fashion e-commerce platform built during Harsh's internship at Cognizant.
+
+The system was designed using microservices architecture where each service owned its own database and business logic.
+
+The project simulated how large-scale enterprise applications are built and deployed in real organizations.
+
+Microservices:
+
+1. Auth Service
+2. Catalog Service
+3. Order Service
+4. Payment Service
+5. Engagement Service
+6. API Gateway
+
+Service Communication:
+
+The services communicated through:
+
+* Eureka Service Discovery
+* OpenFeign Clients
+
+Each service maintained an independent MySQL database.
+
+Harsh's Contributions:
+
+Backend:
+
+* Developed Eureka Server configuration
+* Implemented API Gateway
+* Built Catalog Service
+* Developed Product APIs
+* Developed Inventory APIs
+* Developed Media APIs
+* Integrated service communication
+* Participated in API testing and debugging
+
+Frontend:
+
+* Home Page
+* Category Page
+* Admin Dashboard
+* Seller Dashboard
+* Support Dashboard
+* Route Guards
+* JWT Interceptor
+* Shared UI Components
+
+Angular Features Used:
+
+* Signals
+* RxJS
+* Lazy Loading
+* Standalone Components
+* Route Guards
+* Interceptors
+
+Major Features:
+
+Authentication:
+
+* JWT Access Tokens
+* Secure API Access
+* Role-Based Authorization
+
+Authorization Roles:
+
+* Customer
+* Seller
+* Support
+* Admin
+
+Catalog Features:
+
+* Product Management
+* Category Management
+* Inventory Tracking
+* Product Images
+* Product Search
+
+Order Features:
+
+* Cart Management
+* Order Creation
+* Order Tracking
+
+Payment Features:
+
+* Razorpay Integration
+* Payment Verification
+* Transaction Tracking
+
+Administrative Features:
+
+* Admin Dashboard
+* Seller Dashboard
+* Support Dashboard
+
+Scale:
+
+The application exposed more than 80 APIs.
+
+Biggest Challenge:
+
+Distributed Transactions.
+
+Problem:
+
+An order operation involved:
+
+1. Creating an order
+2. Updating inventory
+3. Processing payment
+
+These operations occurred across multiple databases.
+
+Traditional database transactions could not be used because each microservice owned its own database.
+
+Solution:
+
+Saga Orchestration Pattern.
+
+Implementation:
+
+The Order Service acted as the central orchestrator.
+
+Workflow:
+
+Step 1:
+Order Service creates order.
+
+Step 2:
+Catalog Service reserves inventory.
+
+Step 3:
+Payment Service processes payment.
+
+Success:
+Order confirmed.
+
+Failure:
+Compensation steps executed automatically.
+
+Examples:
+
+Inventory reserved but payment failed:
+→ Inventory restored.
+
+Order created but inventory unavailable:
+→ Order cancelled.
+
+Benefits:
+
+* Data consistency
+* Fault tolerance
+* No shared database dependency
+* Enterprise-ready architecture
+
+Key Learnings:
+
+* Microservices Architecture
+* Distributed Systems
+* Service Discovery
+* API Gateway Design
+* Authentication & Authorization
+* Enterprise Angular Development
+* Distributed Transactions
+* Saga Pattern
+* Team Collaboration
+* Production Software Engineering
+
+Why This Project Matters:
+
+RunWay represents Harsh's strongest Full Stack Engineering project because it combines frontend development, backend development, distributed systems, authentication, payments, database design, and enterprise architecture into one large-scale application.

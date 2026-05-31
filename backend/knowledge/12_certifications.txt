@@ -1,0 +1,49 @@
+# Certifications
+
+1. Oracle Cloud Infrastructure 2025 AI Foundations Associate
+
+Provider:
+Oracle
+
+Status:
+Completed and Certified
+
+Topics Covered:
+
+* Artificial Intelligence Fundamentals
+* Machine Learning Concepts
+* Generative AI
+* Responsible AI
+* Oracle AI Services
+* Prompt Engineering Fundamentals
+
+Impact:
+
+Strengthened understanding of AI concepts and enterprise AI adoption.
+
+---
+
+2. DevOps on AWS Specialization
+
+Provider:
+AWS / Coursera
+
+Status:
+Completed
+
+Program:
+4-Course Specialization
+
+Topics Covered:
+
+* AWS Deployment Models
+* CI/CD Pipelines
+* Infrastructure Automation
+* Monitoring and Logging
+* Cloud Security
+* Scalability
+* High Availability
+
+Impact:
+
+Provided practical understanding of cloud deployment and DevOps workflows.

@@ -1,0 +1,357 @@
+Q: Which language are you most comfortable with?
+
+A: Java is my strongest programming language. I have used Java extensively in my E-Commerce Backend project, RunWay microservices platform during my Cognizant internship, competitive programming, and various academic projects.
+
+---
+
+Q: Why do you like Java?
+
+A: Java provides strong object-oriented programming support, platform independence, excellent ecosystem support, robust libraries, and strong enterprise adoption. It is widely used in scalable backend systems and enterprise applications.
+
+---
+
+Q: What are the main features of Java?
+
+A: Object-Oriented Programming, Platform Independence, JVM, Garbage Collection, Multithreading, Exception Handling, and a rich standard library.
+
+---
+
+Q: What is JVM?
+
+A: JVM stands for Java Virtual Machine. It executes Java bytecode and enables Java's "Write Once, Run Anywhere" capability.
+
+---
+
+Q: What is JDK?
+
+A: JDK stands for Java Development Kit. It contains the JVM, compiler, development tools, and libraries needed for Java development.
+
+---
+
+Q: What is JRE?
+
+A: JRE stands for Java Runtime Environment. It provides the runtime environment needed to execute Java applications.
+
+---
+
+Q: Explain OOP concepts.
+
+A: The four pillars of OOP are Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+---
+
+Q: How have you used OOP in your projects?
+
+A: In RunWay and the E-Commerce Backend, I used OOP extensively through entities, services, repositories, inheritance hierarchies, and abstraction layers to maintain clean architecture and separation of concerns.
+
+---
+
+Q: What is encapsulation?
+
+A: Encapsulation is the process of hiding internal implementation details and exposing controlled access through methods.
+
+---
+
+Q: What is inheritance?
+
+A: Inheritance allows a class to acquire properties and methods from another class, promoting code reuse.
+
+---
+
+Q: What is polymorphism?
+
+A: Polymorphism allows the same method or interface to behave differently based on the object invoking it.
+
+---
+
+Q: What is abstraction?
+
+A: Abstraction hides implementation details and exposes only essential functionality.
+
+---
+
+Q: What are Collections in Java?
+
+A: Collections provide data structures such as List, Set, Queue, and Map for storing and managing groups of objects.
+
+---
+
+Q: Difference between ArrayList and LinkedList?
+
+A: ArrayList provides faster random access while LinkedList performs better for frequent insertions and deletions.
+
+---
+
+Q: Difference between HashMap and HashSet?
+
+A: HashMap stores key-value pairs while HashSet stores unique values only.
+
+---
+
+Q: What is Exception Handling?
+
+A: Exception handling allows programs to handle runtime errors gracefully using try, catch, finally, throw, and throws.
+
+---
+
+Q: Difference between checked and unchecked exceptions?
+
+A: Checked exceptions are verified at compile time while unchecked exceptions occur at runtime.
+
+---
+
+Q: What is Multithreading?
+
+A: Multithreading enables multiple threads to execute concurrently within a program.
+
+---
+
+Q: What is Spring Boot?
+
+A: Spring Boot is a framework that simplifies Spring application development through auto-configuration, embedded servers, starter dependencies, and production-ready features.
+
+---
+
+Q: Why use Spring Boot?
+
+A: Spring Boot reduces boilerplate code, accelerates development, provides production-ready features, and simplifies configuration.
+
+---
+
+Q: Where have you used Spring Boot?
+
+A: In RunWay microservices, E-Commerce REST API Backend, and multiple internship assignments during Cognizant.
+
+---
+
+Q: What is Dependency Injection?
+
+A: Dependency Injection is a design pattern where objects receive dependencies from an external source rather than creating them internally.
+
+---
+
+Q: How does Spring implement Dependency Injection?
+
+A: Through the Spring IoC container using annotations such as @Autowired, constructor injection, and bean configuration.
+
+---
+
+Q: What is IoC?
+
+A: Inversion of Control shifts object creation and lifecycle management from application code to the framework.
+
+---
+
+Q: What is a Bean?
+
+A: A Bean is an object managed by the Spring container.
+
+---
+
+Q: Difference between @Component, @Service, and @Repository?
+
+A: All are Spring-managed beans. @Service is used for business logic, @Repository for persistence logic, and @Component for general-purpose components.
+
+---
+
+Q: What is Spring MVC?
+
+A: Spring MVC is a web framework that follows the Model-View-Controller architecture pattern for building web applications and REST APIs.
+
+---
+
+Q: What is a REST API?
+
+A: REST API is an architectural style that uses HTTP methods to enable communication between systems.
+
+---
+
+Q: Which HTTP methods have you used?
+
+A: GET, POST, PUT, PATCH, and DELETE.
+
+---
+
+Q: What is @RestController?
+
+A: @RestController combines @Controller and @ResponseBody to create RESTful web services.
+
+---
+
+Q: What is @RequestMapping?
+
+A: @RequestMapping maps HTTP requests to controller methods.
+
+---
+
+Q: What is JPA?
+
+A: JPA is a specification for object-relational mapping in Java applications.
+
+---
+
+Q: What is Hibernate?
+
+A: Hibernate is a JPA implementation that simplifies database interactions through ORM.
+
+---
+
+Q: What is ORM?
+
+A: ORM maps database tables to Java objects, reducing manual SQL operations.
+
+---
+
+Q: How have you used JPA/Hibernate?
+
+A: In RunWay and E-Commerce Backend for entity mapping, relationships, persistence, and query execution.
+
+---
+
+Q: What relationships have you used?
+
+A: One-to-One, One-to-Many, Many-to-One, and Many-to-Many.
+
+---
+
+Q: What is Lazy Loading?
+
+A: Lazy Loading delays fetching related entities until they are actually needed.
+
+---
+
+Q: What is Eager Loading?
+
+A: Eager Loading retrieves related entities immediately.
+
+---
+
+Q: What is JWT?
+
+A: JWT is a token-based authentication mechanism used for secure stateless authentication.
+
+---
+
+Q: Where did you use JWT?
+
+A: In RunWay, E-Commerce Backend, and Personal AI Chatbot admin dashboard.
+
+---
+
+Q: Why use JWT instead of sessions?
+
+A: JWT supports stateless authentication, scales better for distributed systems, and works well with microservices.
+
+---
+
+Q: What is Spring Security?
+
+A: Spring Security provides authentication, authorization, and security features for Spring applications.
+
+---
+
+Q: What security features did you implement?
+
+A: JWT authentication, role-based access control, protected APIs, route guards, and secure endpoint access.
+
+---
+
+Q: What is RBAC?
+
+A: Role-Based Access Control restricts access based on user roles and permissions.
+
+---
+
+Q: What roles did RunWay support?
+
+A: Customer, Seller, Support, and Admin.
+
+---
+
+Q: What is Microservices Architecture?
+
+A: Microservices architecture divides an application into independently deployable services focused on specific business capabilities.
+
+---
+
+Q: Why microservices instead of monolith?
+
+A: Better scalability, maintainability, fault isolation, and independent deployment.
+
+---
+
+Q: What is Eureka Server?
+
+A: Eureka Server is a service registry that enables dynamic service discovery in microservices environments.
+
+---
+
+Q: What was your contribution to Eureka?
+
+A: I configured and managed the Eureka Server used by all RunWay microservices.
+
+---
+
+Q: What is API Gateway?
+
+A: API Gateway acts as a single entry point for client requests and routes them to appropriate services.
+
+---
+
+Q: What was your contribution to API Gateway?
+
+A: I developed and configured the API Gateway for RunWay.
+
+---
+
+Q: What is OpenFeign?
+
+A: OpenFeign is a declarative REST client used for inter-service communication.
+
+---
+
+Q: Why use OpenFeign?
+
+A: It reduces boilerplate code and simplifies communication between microservices.
+
+---
+
+Q: What is Resilience4j?
+
+A: Resilience4j provides fault tolerance mechanisms such as Circuit Breakers, Retry, Rate Limiting, and Bulkheads.
+
+---
+
+Q: Where did you use Resilience4j?
+
+A: In RunWay payment flows to improve fault tolerance and reliability.
+
+---
+
+Q: What is Swagger?
+
+A: Swagger provides interactive API documentation and testing capabilities.
+
+---
+
+Q: Why use Swagger?
+
+A: It improves developer productivity and simplifies API testing and integration.
+
+---
+
+Q: What is Flyway?
+
+A: Flyway is a database migration tool that manages schema changes through version-controlled scripts.
+
+---
+
+Q: Where did you use Flyway?
+
+A: In the E-Commerce Backend project for database versioning and deployment consistency.
+
+---
+
+Q: What is the biggest Spring Boot project you built?
+
+A: RunWay, a 6-microservice fashion e-commerce platform built during my Cognizant internship.

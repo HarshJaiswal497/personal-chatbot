@@ -1,0 +1,200 @@
+# Project: AI-Based Symptom Diagnosis System
+
+Project Type:
+Machine Learning Healthcare Application
+
+Team Size:
+Team Project
+
+Duration:
+2026
+
+Tech Stack:
+
+Languages:
+
+* Python
+
+Libraries:
+
+* Scikit-learn
+* Pandas
+* NumPy
+* SHAP
+
+Machine Learning:
+
+* Random Forest
+* Logistic Regression (Baseline)
+
+Techniques:
+
+* Feature Engineering
+* Hyperparameter Tuning
+* Explainable AI (XAI)
+* Fuzzy Matching
+* Synonym Mapping
+
+Dataset Source:
+Kaggle
+
+Dataset Size:
+246,000+ Patient Records
+
+Overview:
+
+The AI-Based Symptom Diagnosis System is a machine learning application designed to predict likely diseases based on patient symptoms.
+
+The objective was to improve diagnostic assistance by leveraging machine learning while maintaining transparency and interpretability.
+
+Problem Statement:
+
+Patients often describe symptoms differently.
+
+Examples:
+
+* "Stomach Pain"
+* "Abdominal Pain"
+
+Both may refer to similar medical conditions but appear differently in raw datasets.
+
+Additionally, healthcare professionals need explanations behind predictions rather than black-box outputs.
+
+The project aimed to solve both challenges.
+
+Approach:
+
+Step 1:
+Collect and clean patient symptom data.
+
+Step 2:
+Normalize symptom descriptions.
+
+Step 3:
+Train machine learning models.
+
+Step 4:
+Generate explainable predictions.
+
+Step 5:
+Display disease predictions and contributing symptoms.
+
+Data Processing:
+
+Implemented:
+
+* Missing value handling
+* Feature engineering
+* Data normalization
+* Symptom cleaning
+
+Symptom Normalization:
+
+To improve real-world usability:
+
+Implemented:
+
+* Fuzzy Matching
+* Synonym Mapping
+
+Examples:
+
+"Feverish"
+→ Fever
+
+"Head Ache"
+→ Headache
+
+"Abdominal Pain"
+→ Stomach Pain
+
+This improved prediction robustness.
+
+Models Evaluated:
+
+1. Logistic Regression
+2. Random Forest
+
+Final Model:
+
+Random Forest
+
+Reason for Selection:
+
+* Higher accuracy
+* Better handling of complex feature interactions
+* Easier integration with Explainable AI techniques
+
+Performance:
+
+Final Accuracy:
+92.28%
+
+Improvement:
+11 percentage points higher than Logistic Regression baseline.
+
+Explainable AI:
+
+Implemented using SHAP.
+
+Problem:
+
+Doctors need to understand why a prediction was made.
+
+Solution:
+
+SHAP generates feature contribution scores.
+
+Example:
+
+Prediction:
+Diabetes
+
+Contributing Symptoms:
+
+* Frequent Urination
+* Increased Thirst
+* Fatigue
+
+Each symptom receives a contribution score.
+
+Benefits:
+
+* Improved trust
+* Better interpretability
+* More transparent predictions
+
+Challenges:
+
+Challenge 1:
+Large dataset preprocessing.
+
+Solution:
+Efficient data cleaning and feature engineering.
+
+Challenge 2:
+Handling symptom variations.
+
+Solution:
+Fuzzy matching and synonym mapping.
+
+Challenge 3:
+Model explainability.
+
+Solution:
+SHAP-based explanations.
+
+Key Learnings:
+
+* Machine Learning Pipelines
+* Feature Engineering
+* Random Forest
+* Explainable AI
+* SHAP
+* Data Cleaning
+* Hyperparameter Tuning
+* Healthcare AI Applications
+
+Why This Project Matters:
+
+This project demonstrates Harsh's ability to combine machine learning, data preprocessing, explainable AI, and practical problem-solving to build trustworthy AI systems.

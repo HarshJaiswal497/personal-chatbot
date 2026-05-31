@@ -1,0 +1,146 @@
+# Project: TechGranny - Digital Learning App for Senior Citizens
+
+Project Type:
+Mobile Application
+
+Status:
+Prototype (Active Development)
+
+Team Size:
+3 Members
+
+Primary Contributor:
+Harsh completed most of the current implementation and architecture. Additional features are being developed with team contributions.
+
+Duration:
+October 2025 – Present
+
+Tech Stack:
+
+Frontend:
+
+* Flutter
+* Dart
+
+Backend:
+
+* Firebase
+
+Services:
+
+* Firebase Authentication
+* Firestore
+* Firebase Storage
+
+Voice Technology:
+
+* Flutter TTS (Text-to-Speech)
+
+Supported Languages:
+
+* English
+* Hindi
+
+Overview:
+
+TechGranny is a mobile application designed to improve digital literacy among senior citizens.
+
+The project aims to help elderly users learn smartphone and internet skills through simple, voice-guided lessons designed specifically for older adults.
+
+Problem Statement:
+
+Many senior citizens struggle to use smartphones, digital payments, messaging applications, online services, and government portals.
+
+Traditional learning platforms are often too complex and are not designed for elderly users.
+
+TechGranny was created to bridge this digital divide.
+
+Core Features:
+
+1. Voice-Guided Learning
+
+Every lesson can be read aloud using Flutter TTS.
+
+Benefits:
+
+* Accessibility
+* Easier learning
+* Reduced dependency on reading
+
+2. Step-by-Step Tutorials
+
+Lessons are broken into simple tasks.
+
+Examples:
+
+* Making a Phone Call
+* Sending Messages
+* Using WhatsApp
+* Online Payments
+* Digital Safety
+
+3. Multi-Language Support
+
+Current Languages:
+
+* English
+* Hindi
+
+Goal:
+
+Allow users to learn in their preferred language.
+
+4. Appointment Booking
+
+Senior citizens can schedule assistance sessions.
+
+Purpose:
+
+Provide personalized support when self-learning is insufficient.
+
+5. Senior-Friendly UI
+
+Design Principles:
+
+* Large buttons
+* High contrast
+* Minimal navigation complexity
+* Clear instructions
+
+Firebase Usage:
+
+Authentication:
+User login and account management.
+
+Firestore:
+Lesson and user data storage.
+
+Storage:
+Media and learning resources.
+
+Challenges:
+
+Challenge 1:
+Designing for elderly users rather than typical smartphone users.
+
+Solution:
+Focus on accessibility and simplicity.
+
+Challenge 2:
+Creating engaging tutorials for non-technical users.
+
+Solution:
+Voice-guided and step-by-step learning.
+
+Future Improvements:
+
+* Additional languages
+* More learning modules
+* Caregiver dashboard
+* Progress tracking
+* AI-powered assistance
+* Video-based lessons
+
+Why This Project Matters:
+
+From a personal perspective, TechGranny is the project Harsh is most proud of because it solves a real-world social problem and has the potential to positively impact senior citizens who struggle with technology.

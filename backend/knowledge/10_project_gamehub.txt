@@ -1,0 +1,137 @@
+# Project: GameHub - Game Discovery Platform
+
+Project Type:
+Frontend Web Application
+
+Status:
+Completed and Deployed
+
+Duration:
+November 2024 – January 2025
+
+Tech Stack:
+
+Frontend:
+
+* React
+* JavaScript
+* CSS
+
+Libraries:
+
+* React Query
+* Context API
+
+API:
+
+* RAWG Video Game Database API
+
+Deployment:
+
+* Vercel
+
+Overview:
+
+GameHub is a game discovery and recommendation platform that allows users to browse, search, filter, and discover video games across multiple genres and categories.
+
+The project was developed to strengthen frontend development skills and gain practical experience with React ecosystems.
+
+Problem Statement:
+
+Gaming platforms contain thousands of titles, making discovery difficult.
+
+Users need efficient ways to search and filter games based on interests.
+
+GameHub addresses this challenge through a clean and responsive discovery experience.
+
+Core Features:
+
+1. Game Discovery
+
+Users can browse more than 1000 games.
+
+2. Category Exploration
+
+Supports more than 10 game categories.
+
+3. Advanced Filtering
+
+Filter by:
+
+* Genre
+* Popularity
+* Platform
+* Rating
+
+4. Sorting
+
+Sort by:
+
+* Popularity
+* Rating
+* Release Date
+
+5. Responsive Design
+
+Optimized for:
+
+* Desktop
+* Tablet
+* Mobile
+
+Technical Features:
+
+React Query:
+
+Used for:
+
+* Data Fetching
+* API Caching
+* Request Optimization
+
+Benefits:
+
+* Reduced unnecessary requests
+* Better performance
+
+Context API:
+
+Used for state management.
+
+Benefits:
+
+* Shared state across components
+* Cleaner architecture
+
+Custom Hooks:
+
+Implemented reusable hooks for:
+
+* API data fetching
+* Filter management
+* State abstraction
+
+Performance Improvements:
+
+React Query caching reduced redundant API calls significantly.
+
+Challenges:
+
+Challenge:
+Managing large amounts of API data efficiently.
+
+Solution:
+React Query caching and optimized component structure.
+
+Key Learnings:
+
+* React Ecosystem
+* State Management
+* API Integration
+* Frontend Architecture
+* Responsive Design
+* Performance Optimization
+
+Why This Project Matters:
+
+GameHub was Harsh's first major frontend-focused project and played a significant role in building his React development foundation before transitioning into Angular.

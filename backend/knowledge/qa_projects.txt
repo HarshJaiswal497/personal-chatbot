@@ -1,0 +1,409 @@
+Q: Which project best represents your skills?
+
+A: RunWay and my Personal AI Chatbot best represent my skills. RunWay demonstrates enterprise-level Full Stack development using Java, Spring Boot, Angular, microservices, JWT, RBAC, distributed transactions, and the Saga Pattern. The Personal AI Chatbot demonstrates my ability to learn and apply AI technologies including RAG, vector databases, embeddings, LLM integration, FastAPI, and Angular.
+
+---
+
+Q: Tell me about RunWay.
+
+A: RunWay is a fashion e-commerce platform built during my Cognizant internship. It follows a microservices architecture with six services: Auth, Catalog, Order, Payment, Engagement, and API Gateway. Each service has its own MySQL database. I was responsible for the Eureka Server, API Gateway, Catalog Service, and several Angular frontend modules.
+
+---
+
+Q: What was your biggest challenge in RunWay?
+
+A: The biggest challenge was handling distributed transactions. Creating an order required coordination between Order, Catalog, and Payment services. We solved this using the Saga Orchestration Pattern where the Order Service acted as the orchestrator and executed compensation actions if a failure occurred.
+
+---
+
+Q: Why did you use Saga Pattern?
+
+A: Traditional database transactions cannot span multiple independent microservice databases. Saga allows each service to perform a local transaction while maintaining overall consistency through compensating actions when failures occur.
+
+---
+
+Q: Why separate databases for each microservice?
+
+A: Database-per-service improves service independence, scalability, fault isolation, and loose coupling. Each microservice owns its data and can evolve independently.
+
+---
+
+Q: Tell me about your Personal AI Chatbot.
+
+A: It is a RAG-powered portfolio assistant built using Angular 21, FastAPI, ChromaDB, Sentence Transformers, and Groq. Recruiters can ask questions about my profile and receive evidence-backed answers. It also includes confidence gating, a JD matcher, JWT-protected admin dashboard, and human-in-the-loop learning.
+
+---
+
+Q: What is RAG?
+
+A: Retrieval-Augmented Generation combines information retrieval with LLM generation. Instead of relying only on model memory, relevant information is first retrieved from a knowledge base and then supplied to the LLM, resulting in more accurate and grounded responses.
+
+---
+
+Q: Why build a chatbot instead of a portfolio website?
+
+A: Traditional portfolios require recruiters to search manually. I wanted recruiters to ask natural-language questions and instantly receive relevant answers. The chatbot acts as an interactive portfolio.
+
+---
+
+Q: What is confidence gating?
+
+A: Confidence gating measures retrieval confidence before generating an answer. If the retrieval score falls below a threshold, the chatbot refuses to answer rather than hallucinating.
+
+---
+
+Q: Why did you choose ChromaDB?
+
+A: ChromaDB is lightweight, easy to integrate, open source, and well suited for RAG applications that require semantic retrieval and vector search.
+
+---
+
+Q: What is human-in-the-loop learning?
+
+A: Unanswered questions are stored and reviewed later. I manually provide answers, re-ingest them into the knowledge base, and improve the chatbot's future responses.
+
+---
+
+Q: Tell me about TechGranny.
+
+A: TechGranny is a Flutter and Firebase-based application designed to help senior citizens learn digital skills. It includes voice-guided tutorials, multilingual support, and appointment booking functionality. It is the project I am most proud of personally because it solves a meaningful real-world problem.
+
+---
+
+Q: Why is TechGranny important to you?
+
+A: Many senior citizens struggle with technology despite increasing digital dependence. TechGranny was built to help bridge this gap and make technology more accessible.
+
+---
+
+Q: Tell me about GameHub.
+
+A: GameHub is a React-based game discovery platform using the RAWG API. It supports filtering, sorting, and browsing over 1000 games across multiple categories.
+
+---
+
+Q: Why move from React to Angular?
+
+A: My internship required Angular, and I found Angular's structured architecture very suitable for enterprise applications. However, I still understand React fundamentals and can work with React after a quick refresher.
+
+---
+
+Q: Tell me about the AI Symptom Diagnosis System.
+
+A: It is a machine learning project using Random Forest, SHAP, and symptom normalization techniques. The model achieved 92.28% accuracy and included explainability features to increase trust in predictions.
+
+---
+
+Q: Why Random Forest instead of XGBoost?
+
+A: Random Forest provided strong accuracy while integrating more naturally with the explainability requirements we had through SHAP.
+
+Q: Which project required the most learning?
+
+A: My Personal AI Chatbot required the most learning because I had to quickly learn Python, FastAPI, RAG architecture, vector databases, embeddings, prompt engineering, ChromaDB, and Groq APIs while simultaneously designing and implementing the application.
+
+---
+
+Q: Which project had the biggest technical complexity?
+
+A: RunWay had the biggest technical complexity because it involved microservices, distributed transactions, service discovery, API Gateway, authentication, authorization, frontend development, and payment integration.
+
+---
+
+Q: Which project are you most proud of?
+
+A: From a technical perspective, I am most proud of RunWay and my Personal AI Chatbot. From a personal perspective, I am most proud of TechGranny because it addresses a real-world social problem.
+
+---
+
+Q: Which project was completed individually?
+
+A: The Employee Directory AWS project, E-Commerce REST API Backend, Personal AI Chatbot, and GameHub were individual projects.
+
+---
+
+Q: Which projects were team projects?
+
+A: RunWay, AI-Based Symptom Diagnosis System, and TechGranny were team projects.
+
+---
+
+Q: What was your exact contribution to RunWay?
+
+A: I was responsible for Eureka Server, API Gateway, Catalog Service, product APIs, inventory APIs, media APIs, and multiple Angular frontend modules including Home Page, Category Page, Admin Dashboard, Seller Dashboard, Support Dashboard, Route Guards, and JWT Interceptor.
+
+---
+
+Q: How many APIs did RunWay have?
+
+A: The platform exposed more than 80 APIs across multiple microservices.
+
+---
+
+Q: What was the purpose of Eureka Server?
+
+A: Eureka Server acted as the service registry and enabled microservices to discover and communicate with each other dynamically without hardcoded service locations.
+
+---
+
+Q: Why did you use API Gateway?
+
+A: API Gateway provided a single entry point for clients, simplified routing, centralized security, and improved maintainability of the microservices architecture.
+
+---
+
+Q: What is OpenFeign?
+
+A: OpenFeign is a declarative REST client used in Spring Boot microservices. It simplifies inter-service communication by allowing developers to call REST endpoints through interfaces.
+
+---
+
+Q: Why did you use OpenFeign?
+
+A: It reduced boilerplate code and simplified communication between microservices in RunWay.
+
+---
+
+Q: Why did you choose Angular for RunWay?
+
+A: Angular provides a structured architecture, dependency injection, built-in routing, guards, interceptors, and scalability, making it suitable for large enterprise applications.
+
+---
+
+Q: Which Angular features did you use?
+
+A: Angular Signals, RxJS, Standalone Components, Lazy Loading, Route Guards, JWT Interceptor, and Role-Based UI rendering.
+
+---
+
+Q: Why use Angular Signals?
+
+A: Signals simplify state management and improve performance by providing fine-grained reactivity.
+
+---
+
+Q: What is Lazy Loading?
+
+A: Lazy Loading loads modules only when required, reducing initial bundle size and improving application startup performance.
+
+---
+
+Q: How was authentication implemented in RunWay?
+
+A: Authentication was implemented using JWT tokens with protected routes, role-based access control, and frontend route guards.
+
+---
+
+Q: What roles existed in RunWay?
+
+A: Customer, Seller, Support, and Admin.
+
+---
+
+Q: What payment gateway was used?
+
+A: Razorpay.
+
+---
+
+Q: Why Razorpay?
+
+A: It provides reliable payment processing, good developer experience, and strong support for Indian payment methods.
+
+---
+
+Q: What is the Catalog Service?
+
+A: The Catalog Service manages products, inventory, categories, and media resources.
+
+---
+
+Q: What APIs did you build in Catalog Service?
+
+A: Product management APIs, inventory APIs, media APIs, and supporting catalog-related endpoints.
+
+---
+
+Q: What is the most unique feature of your chatbot?
+
+A: Human-in-the-loop learning. The chatbot can identify unanswered questions, allow me to answer them manually, and continuously improve its knowledge base.
+
+---
+
+Q: What is semantic search?
+
+A: Semantic search retrieves information based on meaning rather than exact keyword matching by using vector embeddings.
+
+---
+
+Q: What embedding model do you use?
+
+A: all-MiniLM-L6-v2 from Sentence Transformers.
+
+---
+
+Q: Why did you choose all-MiniLM-L6-v2?
+
+A: It offers a strong balance between speed, embedding quality, and resource efficiency for RAG applications.
+
+---
+
+Q: What chunking strategy do you use?
+
+A: Chunk size of 300 with overlap of 50.
+
+---
+
+Q: Why use overlap in chunking?
+
+A: Overlap preserves context across chunk boundaries and improves retrieval quality.
+
+---
+
+Q: What vector database do you use?
+
+A: ChromaDB.
+
+---
+
+Q: Why not store everything directly in the LLM prompt?
+
+A: Large knowledge bases exceed context windows and become expensive. Retrieval allows only relevant information to be sent to the model.
+
+---
+
+Q: What is the purpose of the JD Matcher?
+
+A: It helps recruiters compare job requirements against my profile and generates MATCH, PARTIAL MATCH, and GAP analysis.
+
+---
+
+Q: How does the JD Matcher work?
+
+A: It extracts requirements, retrieves supporting evidence from the knowledge base, and uses an LLM to generate structured comparisons.
+
+---
+
+Q: Why did you build the admin dashboard?
+
+A: To manage unanswered questions, monitor chatbot behavior, and continuously improve the knowledge base.
+
+---
+
+Q: How is the dashboard secured?
+
+A: Using JWT authentication and protected routes.
+
+---
+
+Q: What rate limiting solution did you use?
+
+A: SlowAPI.
+
+---
+
+Q: Why is rate limiting important?
+
+A: It prevents abuse, protects infrastructure, and ensures fair usage.
+
+---
+
+Q: What was the hardest part of building the chatbot?
+
+A: Learning multiple new technologies simultaneously while designing a complete product from scratch.
+
+---
+
+Q: What future improvements are planned for the chatbot?
+
+A: Better UI/UX, richer knowledge base, enhanced analytics, improved personalization, and public deployment.
+
+---
+
+Q: What was the goal of the AI Symptom Diagnosis project?
+
+A: To predict diseases from symptoms while maintaining transparency through explainable AI techniques.
+
+---
+
+Q: What is SHAP?
+
+A: SHAP is an explainability framework that shows how individual features contribute to model predictions.
+
+---
+
+Q: Why is explainability important in healthcare?
+
+A: Healthcare professionals need to understand why a prediction was made before trusting and acting on it.
+
+---
+
+Q: How did you handle symptom variations?
+
+A: Through fuzzy matching and synonym mapping.
+
+---
+
+Q: What accuracy did the diagnosis system achieve?
+
+A: 92.28%.
+
+---
+
+Q: What was the purpose of the Employee Directory project?
+
+A: To compare traditional cloud architectures with serverless architectures and evaluate scalability, cost, and operational complexity.
+
+---
+
+Q: What AWS services were used?
+
+A: EC2, ELB, Auto Scaling, Lambda, API Gateway, DynamoDB, S3, and CloudWatch.
+
+---
+
+Q: What was the key result of the Employee Directory project?
+
+A: More than 40% infrastructure cost reduction through serverless architecture.
+
+---
+
+Q: What makes TechGranny different from other projects?
+
+A: It focuses on social impact by helping senior citizens improve digital literacy through voice-guided learning.
+
+---
+
+Q: What technology powers voice guidance in TechGranny?
+
+A: Flutter TTS.
+
+---
+
+Q: What languages are supported?
+
+A: English and Hindi.
+
+---
+
+Q: What is the purpose of appointment booking?
+
+A: To allow senior citizens to receive personalized assistance when needed.
+
+---
+
+Q: What did GameHub teach you?
+
+A: React fundamentals, API integration, caching, state management, and frontend performance optimization.
+
+---
+
+Q: What API does GameHub use?
+
+A: RAWG Video Game Database API.
+
+---
+
+Q: Why is GameHub important in your learning journey?
+
+A: It was my first major frontend project and built the foundation that later helped me learn Angular quickly.

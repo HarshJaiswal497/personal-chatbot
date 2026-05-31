@@ -1,0 +1,181 @@
+# Project: E-Commerce REST API Backend
+
+Project Type:
+Backend Development Project
+
+Team Size:
+Individual Project
+
+Duration:
+April 2025 – August 2025
+
+Technologies:
+
+Backend:
+
+* Java
+* Spring Boot
+* Spring Security
+* JWT Authentication
+
+Database:
+
+* MySQL
+* JPA/Hibernate
+
+Payments:
+
+* Stripe
+
+DevOps:
+
+* Flyway
+
+Documentation:
+
+* Swagger/OpenAPI
+
+Testing:
+
+* Postman
+
+Overview:
+
+This project involved building a complete e-commerce backend capable of supporting products, users, carts, wishlists, orders, and payments.
+
+The goal was to design a production-style REST API system with proper authentication, database management, and payment integration.
+
+Scale:
+
+Database designed to manage more than 50,000 records across multiple entities.
+
+Entities:
+
+* Users
+* Products
+* Categories
+* Carts
+* Orders
+* Wishlists
+* Payments
+
+Architecture:
+
+Client
+↓
+Spring Boot REST APIs
+↓
+MySQL Database
+
+Core Features:
+
+Authentication:
+
+Implemented:
+
+* JWT Authentication
+* Secure Login
+* Protected Endpoints
+
+Benefits:
+
+* Stateless Authentication
+* Scalable Security
+
+Product Management:
+
+* Create Products
+* Update Products
+* Delete Products
+* Search Products
+
+Cart Management:
+
+* Add to Cart
+* Remove from Cart
+* Update Quantity
+
+Wishlist Features:
+
+* Add to Wishlist
+* Remove from Wishlist
+
+Order Management:
+
+* Create Orders
+* Track Orders
+* Order History
+
+Payment Integration:
+
+Integrated Stripe Payment Gateway.
+
+Features:
+
+* Payment Processing
+* Payment Verification
+* Transaction Handling
+
+Database Design:
+
+Designed a database-first architecture.
+
+Objectives:
+
+* Efficient joins
+* Reduced redundancy
+* Scalable schema
+
+Used:
+
+* Primary Keys
+* Foreign Keys
+* Relationships
+* Indexing Strategies
+
+Database Migration:
+
+Implemented Flyway.
+
+Benefits:
+
+* Version-controlled database changes
+* Consistent deployments
+* Reduced deployment failures
+
+Documentation:
+
+Implemented Swagger/OpenAPI.
+
+Benefits:
+
+* Interactive API Documentation
+* Easier Testing
+* Improved Developer Experience
+
+API Count:
+
+More than 15 REST APIs implemented.
+
+Challenges:
+
+Challenge:
+Managing relationships across multiple entities while maintaining performance.
+
+Solution:
+Careful schema design and JPA relationship mapping.
+
+Key Learnings:
+
+* REST API Design
+* Spring Boot
+* JWT Security
+* Database Design
+* JPA/Hibernate
+* Payment Integration
+* API Documentation
+* Database Versioning
+
+Why This Project Matters:
+
+This project established Harsh's backend development foundation and significantly improved his understanding of production-grade REST API design, security, payments, and database architecture.

@@ -27,25 +27,74 @@ load_dotenv()
 CHROMA_PATH          = "chroma_db"
 COLLECTION_NAME      = "harsh_knowledge"
 CONFIDENCE_THRESHOLD = 0.45   # below this → "I don't know"
-TOP_K                = 4      # number of chunks to retrieve per query
+TOP_K                = 8      # number of chunks to retrieve per query
 MODEL_NAME           = "llama-3.1-8b-instant"
 MAX_HISTORY_TURNS    = 3      # how many past exchanges to inject (3 = last 3 Q&A pairs)
 
 
 # ── System Prompt ─────────────────────────────────────────────────────────────
-SYSTEM_PROMPT = """You are a professional AI assistant representing Harsh Jaiswal.
+SYSTEM_PROMPT = """
+You are a professional AI assistant representing Harsh Jaiswal.
 
-Your job is to answer questions about Harsh accurately and confidently, using ONLY the context provided below.
+Your job is to answer questions about Harsh accurately and confidently using ONLY the provided context.
 
 Rules:
-1. Write in third person: "Harsh has...", "He built...", "His GPA is..."
-2. Be concise and professional. Recruiters are busy — give direct, specific answers.
-3. Always ground your answer in the context. Do not add information not present.
-4. At the very end of your answer, always add exactly one line:
-   SOURCES: [comma-separated list of source filenames from the metadata]
-5. If you cannot find the answer in the context, respond with exactly: I_DONT_KNOW
 
-Do not apologise. Do not say "based on the context". Just answer directly and confidently."""
+1. Write in third person.
+   Example:
+   - "Harsh has experience with..."
+   - "He developed..."
+   - "His GPA is..."
+
+2. Use ONLY information present in the context.
+
+3. When answering technical questions:
+   - Mention ALL relevant technologies found in context.
+   - Mention project names whenever possible.
+   - Mention internship experience if relevant.
+   - Mention certifications if relevant.
+
+4. Do not omit technologies that appear in the retrieved context.
+
+5. Prefer concrete facts over vague summaries.
+
+6. If multiple projects are relevant, include all of them.
+
+7. If the answer cannot be found in context, respond exactly:
+I_DONT_KNOW
+
+8. At the very end add exactly one line:
+
+9. When answering experience-related questions:
+
+- Include relevant project names.
+- Include technologies used.
+- Include responsibilities and contributions.
+- Include achievements and outcomes.
+- Include numbers and metrics whenever available.
+
+Examples:
+- Number of APIs built
+- Number of pages developed
+- Team size
+- GPA
+- DSA problems solved
+- Certifications completed
+
+10. Prefer detailed factual answers over short summaries.
+
+11. If a question is about a skill or technology, explain:
+- where Harsh used it
+- what he built with it
+- his responsibilities
+- the outcome
+
+SOURCES: [comma separated filenames]
+
+Do not apologise.
+Do not say "based on the context".
+Do not invent information.
+"""
 
 
 # ── Module-level singletons (loaded once at startup) ─────────────────────────
@@ -83,6 +132,7 @@ def retrieve(query: str) -> tuple[list[str], list[float], list[dict]]:
         scores  — list of similarity scores (0–1, higher = more relevant)
         metas   — list of metadata dicts (source filename, chunk index)
     """
+   
     query_embedding = _model.encode([query]).tolist()[0]
     results = _collection.query(
         query_embeddings=[query_embedding],
@@ -93,8 +143,56 @@ def retrieve(query: str) -> tuple[list[str], list[float], list[dict]]:
     dists  = results["distances"][0]
     metas  = results["metadatas"][0]
     scores = [_cosine_score(d) for d in dists]
+    
+    print("\n=== RETRIEVAL DEBUG ===")
+
+    for score, meta in zip(scores, metas):
+        print(
+            f"{meta['source']} "
+            f"(chunk {meta['chunk_index']}) "
+            f"score={score}"
+        )
+
+    print("=======================\n")
+ 
     return docs, scores, metas
 
+def retrieve_jd(query: str):
+    """
+    JD matching retrieval.
+    Searches only technical evidence files.
+    """
+
+    query_embedding = _model.encode([query]).tolist()[0]
+
+    results = _collection.query(
+        query_embeddings=[query_embedding],
+        n_results=10,
+        where={
+            "source": {
+                "$in": [
+                    "jd_evidence.txt",
+                    "11_skills.txt",
+                    "03_experience_cognizant.txt",
+                    "04_project_runway.txt",
+                    "05_project_personal_ai_chatbot.txt",
+                    "06_project_ai_symptom_diagnosis.txt",
+                    "qa_java_springboot.txt",
+                    "qa_ai_ml_genai.txt",
+                    "qa_cloud_devops.txt"
+                ]
+            }
+        },
+        include=["documents", "distances", "metadatas"]
+    )
+
+    docs = results["documents"][0]
+    dists = results["distances"][0]
+    metas = results["metadatas"][0]
+
+    scores = [_cosine_score(d) for d in dists]
+
+    return docs, scores, metas
 
 def _build_messages(context: str, query: str, history: list[dict]) -> list[dict]:
     """
@@ -142,7 +240,12 @@ def answer(query: str, history: list[dict] = []) -> dict:
             "sources":   [],
         }
 
-    context  = "\n\n---\n\n".join(docs)
+    context = ""
+
+    for doc, meta in zip(docs, metas):
+        source = meta.get("source", "unknown")
+        context += f"\n\nSOURCE FILE: {source}\n{doc}"
+    
     sources  = list(dict.fromkeys(m["source"] for m in metas))  # deduplicated, ordered
     messages = _build_messages(context, query, history)
 
@@ -182,7 +285,12 @@ def answer_stream(query: str, history: list[dict] = []) -> Generator[dict, None,
         yield {"type": "no_answer", "score": best_score}
         return
 
-    context  = "\n\n---\n\n".join(docs)
+    context = ""
+
+    for doc, meta in zip(docs, metas):
+        source = meta.get("source", "unknown")
+        context += f"\n\nSOURCE FILE: {source}\n{doc}"
+    
     sources  = list(dict.fromkeys(m["source"] for m in metas))
     messages = _build_messages(context, query, history)
 
@@ -221,7 +329,7 @@ def jd_match(jd_text: str) -> dict:
         messages=[{
             "role": "user",
             "content": (
-                "Extract the top 5 most important technical requirements from this job description. "
+                "Extract ALL technical skills, tools, frameworks, cloud platforms, AI technologies, databases, and programming languages mentioned in the job description."
                 "Return them as a numbered list. Be specific — include tech names, years of experience, "
                 "and seniority where mentioned.\n\n"
                 f"Job Description:\n{jd_text}"
@@ -233,9 +341,14 @@ def jd_match(jd_text: str) -> dict:
     requirements = req_response.choices[0].message.content.strip()
 
     # Step 2: Retrieve relevant profile chunks using the JD text
-    docs, scores, metas = retrieve(jd_text[:600])   # use first 600 chars for embedding
+    docs, scores, metas = retrieve_jd(requirements)   # use first 600 chars for embedding
     best_score = max(scores) if scores else 0.0
-    context    = "\n\n---\n\n".join(docs)
+    context = ""
+
+    for doc, meta in zip(docs, metas):
+        source = meta.get("source", "unknown")
+        context += f"\n\nSOURCE FILE: {source}\n{doc}"
+    
     sources    = list(dict.fromkeys(m["source"] for m in metas))
 
     # Step 3: Generate MATCH/PARTIAL/GAP analysis
@@ -245,11 +358,46 @@ def jd_match(jd_text: str) -> dict:
             {
                 "role": "system",
                 "content": (
-                    "You are evaluating a candidate's fit for a job. "
-                    "For each requirement, classify as MATCH, PARTIAL MATCH, or GAP. "
-                    "After each classification, add specific evidence from the candidate profile. "
-                    "End with a final line: Overall Match: X% — [one-line summary]. "
-                    "Be honest and specific."
+                    """
+                        You are evaluating Harsh Jaiswal against a job description.
+
+                        Use ONLY the candidate profile provided.
+
+                        For every requirement:
+
+                        MATCH:
+                        Candidate has direct hands-on experience with the skill through projects, internship, certifications, coursework, or practical implementation.
+
+                        PARTIAL MATCH:
+                        Candidate has indirect exposure, limited experience, or closely related experience.
+
+                        GAP:
+                        No evidence exists in the candidate profile.
+
+                        IMPORTANT:
+                        Do NOT use years-of-experience requirements when classifying.
+                        Classify based on demonstrated skills and evidence only.
+
+                        A fresher candidate can still receive MATCH if strong project or internship evidence exists.
+
+                        Never assume a skill is missing if evidence exists.
+
+                        For each requirement provide:
+
+                        Requirement:
+                        Classification:
+                        Evidence:
+
+                        Evidence must mention:
+                        - project names
+                        - internship experience
+                        - certifications
+                        - technologies
+
+                        End with:
+
+                        Overall Match: X% — one sentence summary.
+                    """
                 )
             },
             {

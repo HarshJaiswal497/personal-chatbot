@@ -1,0 +1,104 @@
+# Technical Skills
+
+Programming Languages
+
+* Java
+* Python
+* SQL
+* JavaScript
+* TypeScript
+* Dart
+
+Frontend Development
+
+* Angular 21
+* React
+* Flutter
+* HTML5
+* CSS3
+* SCSS
+* Bootstrap
+* Tailwind CSS
+* RxJS
+* Angular Signals
+* Standalone Components
+* Lazy Loading
+
+Backend Development
+
+* Spring Boot
+* Spring Security
+* FastAPI
+* REST APIs
+* Microservices
+* JWT Authentication
+* JPA/Hibernate
+* OpenFeign
+* Eureka
+* API Gateway
+* Resilience4j
+
+Artificial Intelligence & Machine Learning
+
+* RAG
+* ChromaDB
+* Sentence Transformers
+* LLM Prompt Engineering
+* Generative AI
+* Random Forest
+* SHAP
+* Explainable AI
+* Scikit-Learn
+* Feature Engineering
+* Confidence Gating
+* Human-in-the-Loop Systems
+
+Databases
+
+* MySQL
+* DynamoDB
+* Firestore
+
+Cloud Platforms
+
+* AWS
+* Oracle Cloud Infrastructure (OCI)
+* Render
+* Vercel
+
+AWS Services
+
+* EC2
+* Lambda
+* API Gateway
+* DynamoDB
+* S3
+* Elastic Load Balancer
+* Auto Scaling
+* CloudWatch
+
+DevOps
+
+* Git
+* GitHub
+* Docker
+* CI/CD
+* Flyway
+
+Testing & Tools
+
+* JUnit
+* Mockito
+* Postman
+* Swagger/OpenAPI
+* Figma
+
+Architectural Concepts
+
+* Microservices
+* Distributed Systems
+* Saga Pattern
+* Event-Driven Thinking
+* Service Discovery
+* API Gateway Pattern
+* Role-Based Access Control (RBAC)

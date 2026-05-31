@@ -1,0 +1,267 @@
+Q: What cloud platforms have you worked with?
+
+A: I have worked with AWS, Oracle Cloud Infrastructure (OCI), Render, and Vercel.
+
+---
+
+Q: Which cloud platform are you most comfortable with?
+
+A: AWS because I completed the DevOps on AWS Specialization and built the Employee Directory project using multiple AWS services.
+
+---
+
+Q: Which AWS services have you used?
+
+A: EC2, Lambda, API Gateway, DynamoDB, S3, Elastic Load Balancer (ELB), Auto Scaling, and CloudWatch.
+
+---
+
+Q: What is EC2?
+
+A: Amazon EC2 provides virtual servers in the cloud that allow users to deploy and run applications.
+
+---
+
+Q: Where did you use EC2?
+
+A: In the Employee Directory project's traditional architecture deployment.
+
+---
+
+Q: What is AWS Lambda?
+
+A: AWS Lambda is a serverless compute service that executes code without requiring server management.
+
+---
+
+Q: Where did you use Lambda?
+
+A: In the serverless architecture version of the Employee Directory project.
+
+---
+
+Q: What is serverless computing?
+
+A: Serverless computing allows developers to run applications without managing servers. The cloud provider handles infrastructure, scaling, and maintenance.
+
+---
+
+Q: What are the benefits of serverless architecture?
+
+A: Lower operational overhead, automatic scaling, reduced infrastructure management, and potential cost savings.
+
+---
+
+Q: What is API Gateway?
+
+A: API Gateway acts as an entry point for APIs and routes requests to backend services.
+
+---
+
+Q: How did you use API Gateway in AWS?
+
+A: In the Employee Directory serverless architecture, API Gateway routed requests to Lambda functions.
+
+---
+
+Q: What is DynamoDB?
+
+A: DynamoDB is AWS's fully managed NoSQL database service.
+
+---
+
+Q: Why use DynamoDB?
+
+A: It provides high scalability, low latency, and serverless operation.
+
+---
+
+Q: What is Amazon S3?
+
+A: Amazon S3 is an object storage service used to store files, media, and static assets.
+
+---
+
+Q: Where did you use S3?
+
+A: For static assets in the Employee Directory serverless deployment.
+
+---
+
+Q: What is Elastic Load Balancer?
+
+A: ELB distributes incoming traffic across multiple application instances to improve availability and fault tolerance.
+
+---
+
+Q: What is Auto Scaling?
+
+A: Auto Scaling automatically adjusts the number of instances based on demand.
+
+---
+
+Q: Why is Auto Scaling important?
+
+A: It improves availability while controlling infrastructure costs.
+
+---
+
+Q: What is CloudWatch?
+
+A: CloudWatch is AWS's monitoring and logging service.
+
+---
+
+Q: How did you evaluate the two AWS architectures?
+
+A: Through stress testing, load testing, cost analysis, and scalability comparisons.
+
+---
+
+Q: What was the outcome of your AWS project?
+
+A: The serverless architecture achieved more than 40% infrastructure cost reduction while maintaining equivalent functionality.
+
+---
+
+Q: What is Infrastructure Cost Optimization?
+
+A: It is the process of reducing cloud expenses while maintaining performance and reliability.
+
+---
+
+Q: What certification do you have related to cloud computing?
+
+A: Oracle Cloud Infrastructure 2025 AI Foundations Associate and DevOps on AWS Specialization.
+
+---
+
+Q: What did you learn from the DevOps on AWS Specialization?
+
+A: Cloud deployment models, CI/CD pipelines, monitoring, automation, scalability, and cloud security.
+
+---
+
+Q: What is DevOps?
+
+A: DevOps is a set of practices that combines software development and IT operations to improve deployment speed, reliability, and collaboration.
+
+---
+
+Q: What are the benefits of DevOps?
+
+A: Faster releases, improved reliability, automation, continuous delivery, and better collaboration.
+
+---
+
+Q: What is CI/CD?
+
+A: CI/CD stands for Continuous Integration and Continuous Delivery/Deployment.
+
+---
+
+Q: What is Continuous Integration?
+
+A: Continuous Integration involves frequently merging code changes and validating them through automated testing.
+
+---
+
+Q: What is Continuous Delivery?
+
+A: Continuous Delivery ensures software is always in a deployable state.
+
+---
+
+Q: What is Continuous Deployment?
+
+A: Continuous Deployment automatically releases validated code changes to production.
+
+---
+
+Q: What version control system do you use?
+
+A: Git.
+
+---
+
+Q: Why is Git important?
+
+A: Git enables version tracking, collaboration, rollback capability, and branch-based development.
+
+---
+
+Q: What Git workflow do you typically follow?
+
+A: Feature branch development followed by pull requests and merging into the main branch.
+
+---
+
+Q: What is Docker?
+
+A: Docker is a containerization platform that packages applications and dependencies into portable containers.
+
+---
+
+Q: Why use Docker?
+
+A: Docker ensures consistent environments across development, testing, and deployment.
+
+---
+
+Q: Have you used Docker?
+
+A: Yes, I understand Docker concepts and use it for application packaging and deployment workflows.
+
+---
+
+Q: What is containerization?
+
+A: Containerization packages an application and its dependencies into a lightweight isolated environment.
+
+---
+
+Q: What is the difference between a VM and a container?
+
+A: VMs virtualize hardware while containers share the host operating system kernel and are lighter and faster.
+
+---
+
+Q: What is Render?
+
+A: Render is a cloud platform used for deploying backend services.
+
+---
+
+Q: What role does Render play in your chatbot?
+
+A: The FastAPI backend is planned to be deployed on Render.
+
+---
+
+Q: What is Vercel?
+
+A: Vercel is a cloud platform optimized for frontend deployments.
+
+---
+
+Q: What role does Vercel play in your chatbot?
+
+A: The Angular frontend is planned to be deployed on Vercel.
+
+---
+
+Q: Why separate frontend and backend deployments?
+
+A: Independent deployments improve scalability, maintainability, and deployment flexibility.
+
+---
+
+Q: What are the most important cloud concepts you understand?
+
+A: Scalability, fault tolerance, high availability, elasticity, serverless computing, monitoring, and cost optimization.
+
+---
+
+Q: What cloud concept interests you most?
+
+A: Designing scalable systems that balance performance, reliability, and cost efficiency.

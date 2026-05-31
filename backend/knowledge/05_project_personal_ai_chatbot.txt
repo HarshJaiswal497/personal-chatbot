@@ -1,0 +1,273 @@
+# Project: Personal AI Chatbot
+
+Project Type:
+AI-Powered Portfolio Assistant
+
+Project Category:
+Retrieval-Augmented Generation (RAG)
+
+Team Size:
+Individual Project
+
+Status:
+Active Development
+
+Deployment Plan:
+
+* Backend: Render
+* Frontend: Vercel
+
+Tech Stack:
+
+Frontend:
+
+* Angular 21
+* TypeScript
+
+Backend:
+
+* Python
+* FastAPI
+
+AI Stack:
+
+* ChromaDB
+* Sentence Transformers
+* Groq
+* LLaMA Models
+* RAG Architecture
+
+Security:
+
+* JWT Authentication
+
+Infrastructure:
+
+* Render
+* Vercel
+
+Rate Limiting:
+
+* SlowAPI
+
+Embedding Model:
+
+all-MiniLM-L6-v2
+
+Chunking Strategy:
+
+Chunk Size:
+300
+
+Chunk Overlap:
+50
+
+Project Motivation:
+
+Harsh wanted a smarter alternative to a traditional portfolio website.
+
+Instead of forcing recruiters to navigate pages and sections manually, he wanted them to ask questions naturally and receive instant answers.
+
+Examples:
+
+* Tell me about Harsh's projects.
+* What technologies does Harsh know?
+* Does Harsh know Spring Boot?
+* Compare Harsh to this job description.
+
+This idea led to the development of a RAG-powered portfolio chatbot.
+
+Problem Statement:
+
+Traditional portfolios are static.
+
+Recruiters must spend time searching through resumes, project descriptions, and links.
+
+The chatbot solves this problem by acting as an AI-powered personal representative.
+
+Architecture:
+
+Knowledge Base
+↓
+Chunking
+↓
+Sentence Transformer Embeddings
+↓
+ChromaDB Vector Store
+↓
+Semantic Retrieval
+↓
+Groq LLM
+↓
+Generated Answer
+
+Retrieval Process:
+
+Step 1:
+User asks a question.
+
+Step 2:
+Question is embedded using sentence-transformers.
+
+Step 3:
+Most relevant chunks retrieved from ChromaDB.
+
+Step 4:
+Retrieved context passed to LLM.
+
+Step 5:
+Grounded answer generated.
+
+Core Features:
+
+1. Retrieval-Augmented Generation (RAG)
+
+Implemented complete RAG pipeline from scratch.
+
+Benefits:
+
+* Reduced hallucinations
+* Grounded answers
+* Knowledge-based responses
+
+2. Confidence Gating
+
+Problem:
+
+LLMs often hallucinate when information is missing.
+
+Solution:
+
+Implemented confidence scoring.
+
+Threshold:
+0.45
+
+Behavior:
+
+Below threshold:
+Bot refuses to answer.
+
+Above threshold:
+Bot generates answer.
+
+Result:
+
+Significantly improved reliability.
+
+3. Human-in-the-Loop Learning
+
+Problem:
+
+New recruiter questions may not exist in knowledge base.
+
+Solution:
+
+Unanswered questions are captured.
+
+Harsh can:
+
+* Review questions
+* Add answers
+* Re-ingest knowledge
+* Improve chatbot over time
+
+Result:
+
+Self-improving system.
+
+4. JD Matcher
+
+Feature:
+
+Users can paste a Job Description.
+
+The system:
+
+* Extracts requirements
+* Retrieves evidence
+* Performs comparison
+* Generates analysis
+
+Output:
+
+* MATCH
+* PARTIAL MATCH
+* GAP
+
+This helps recruiters quickly assess fit.
+
+5. Admin Dashboard
+
+Protected using JWT Authentication.
+
+Dashboard Features:
+
+* Gap Question Review
+* Knowledge Management
+* Analytics
+* Monitoring
+
+6. Streaming Responses
+
+Responses appear word-by-word similar to ChatGPT.
+
+Benefits:
+
+* Better user experience
+* Faster perceived performance
+
+7. Rate Limiting
+
+Implemented using SlowAPI.
+
+Purpose:
+
+Prevent API abuse.
+
+Current Limit:
+
+30 requests per minute.
+
+Biggest Challenge:
+
+Learning and integrating multiple unfamiliar technologies simultaneously.
+
+Harsh had to learn:
+
+* Python
+* FastAPI
+* RAG
+* Vector Databases
+* LLM Workflows
+* Prompt Engineering
+* ChromaDB
+* Groq APIs
+
+while simultaneously designing and building the product.
+
+Key Learnings:
+
+* Retrieval-Augmented Generation
+* Vector Databases
+* Embedding Models
+* Prompt Engineering
+* FastAPI
+* Angular Integration
+* Authentication
+* AI Product Development
+
+Future Improvements:
+
+* Better UI/UX
+* Richer Knowledge Base
+* Public Deployment
+* Improved Analytics
+* Enhanced Personalization
+* More Advanced JD Matching
+
+Why This Project Matters:
+
+This is Harsh's most advanced AI project.
+
+It combines Full Stack Development, AI Engineering, RAG, Authentication, Knowledge Management, and Product Design into a single system and demonstrates his ability to learn new technologies quickly and turn ideas into working products.

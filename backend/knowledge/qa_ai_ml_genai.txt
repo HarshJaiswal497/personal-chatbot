@@ -1,0 +1,339 @@
+Q: What areas of AI have you worked on?
+
+A: I have worked on Retrieval-Augmented Generation (RAG), Large Language Model integration, Prompt Engineering, Explainable AI (XAI), Machine Learning, Vector Databases, Embedding Models, and Human-in-the-Loop AI systems.
+
+---
+
+Q: What is Generative AI?
+
+A: Generative AI refers to AI systems capable of creating new content such as text, images, code, audio, or videos based on patterns learned from training data.
+
+---
+
+Q: What is an LLM?
+
+A: A Large Language Model (LLM) is an AI model trained on massive amounts of text data that can understand and generate human-like language.
+
+---
+
+Q: Which LLMs have you worked with?
+
+A: Through my Personal AI Chatbot and Cognizant GenAI training, I have worked with LLaMA-based models through the Groq API.
+
+---
+
+Q: What is RAG?
+
+A: Retrieval-Augmented Generation combines information retrieval with LLM generation. Relevant information is first retrieved from a knowledge base and then supplied to the LLM before generating an answer.
+
+---
+
+Q: Why is RAG better than using an LLM alone?
+
+A: LLMs can hallucinate or provide outdated information. RAG grounds responses using retrieved information from a trusted knowledge base, improving accuracy and reliability.
+
+---
+
+Q: Why did you choose RAG for your chatbot?
+
+A: Recruiters need accurate information about my profile. RAG allows the chatbot to answer using my knowledge base rather than relying solely on model knowledge.
+
+---
+
+Q: Explain the architecture of your chatbot.
+
+A: Knowledge Base → Chunking → Embedding Generation → ChromaDB Storage → Semantic Retrieval → Groq LLM → Final Response.
+
+---
+
+Q: What are embeddings?
+
+A: Embeddings are numerical vector representations of text that capture semantic meaning.
+
+---
+
+Q: Why are embeddings needed?
+
+A: They allow semantic similarity search. Instead of matching exact keywords, the system can retrieve information based on meaning.
+
+---
+
+Q: Which embedding model do you use?
+
+A: all-MiniLM-L6-v2 from Sentence Transformers.
+
+---
+
+Q: Why choose all-MiniLM-L6-v2?
+
+A: It provides a good balance between speed, memory efficiency, and retrieval quality.
+
+---
+
+Q: What is a vector database?
+
+A: A vector database stores embeddings and enables efficient similarity search.
+
+---
+
+Q: Which vector database did you use?
+
+A: ChromaDB.
+
+---
+
+Q: Why ChromaDB?
+
+A: ChromaDB is lightweight, open source, easy to integrate, and well suited for personal RAG applications.
+
+---
+
+Q: What is semantic search?
+
+A: Semantic search retrieves information based on meaning rather than exact keyword matching.
+
+---
+
+Q: What chunking strategy do you use?
+
+A: Chunk size of 300 characters with an overlap of 50 characters.
+
+---
+
+Q: Why use overlap?
+
+A: Overlap helps preserve context across chunk boundaries and improves retrieval quality.
+
+---
+
+Q: What is cosine similarity?
+
+A: Cosine similarity measures how similar two vectors are by comparing the angle between them.
+
+---
+
+Q: How does retrieval work in your chatbot?
+
+A: User query is embedded, compared against stored embeddings, and the most similar chunks are retrieved before being passed to the LLM.
+
+---
+
+Q: What is confidence gating?
+
+A: Confidence gating prevents the chatbot from answering when retrieval confidence is too low.
+
+---
+
+Q: Why did you implement confidence gating?
+
+A: To reduce hallucinations and improve trustworthiness.
+
+---
+
+Q: What confidence threshold do you use?
+
+A: 0.45.
+
+---
+
+Q: What happens below the threshold?
+
+A: The chatbot refuses to answer and may request additional information instead of generating an unreliable response.
+
+---
+
+Q: What is prompt engineering?
+
+A: Prompt engineering is the process of designing prompts that guide LLMs toward desired outputs.
+
+---
+
+Q: How did you use prompt engineering?
+
+A: In the chatbot and JD matcher, I carefully structured prompts to improve retrieval grounding, answer quality, and requirement extraction.
+
+---
+
+Q: What is a hallucination?
+
+A: A hallucination occurs when an LLM generates incorrect or fabricated information.
+
+---
+
+Q: How does RAG reduce hallucinations?
+
+A: By supplying retrieved factual context before answer generation.
+
+---
+
+Q: How does confidence gating reduce hallucinations?
+
+A: It prevents response generation when the system lacks sufficient supporting evidence.
+
+---
+
+Q: What is Human-in-the-Loop AI?
+
+A: Human-in-the-Loop systems allow humans to review, correct, and improve AI outputs.
+
+---
+
+Q: How did you implement Human-in-the-Loop learning?
+
+A: Unanswered recruiter questions are stored. I later answer them manually and re-ingest them into the knowledge base.
+
+---
+
+Q: What are the benefits of Human-in-the-Loop systems?
+
+A: Continuous improvement, higher accuracy, better reliability, and reduced knowledge gaps.
+
+---
+
+Q: What is a knowledge base?
+
+A: A structured collection of information used by the retrieval system to answer questions.
+
+---
+
+Q: Why is knowledge base quality important?
+
+A: Retrieval quality directly depends on the quality, completeness, and organization of stored information.
+
+---
+
+Q: What is retrieval quality?
+
+A: Retrieval quality measures how effectively relevant information is identified and returned.
+
+---
+
+Q: What is vector similarity search?
+
+A: It finds embeddings that are closest to a query embedding using similarity metrics.
+
+---
+
+Q: What is context injection?
+
+A: Context injection refers to supplying retrieved information to the LLM before generation.
+
+---
+
+Q: Why not put all information directly into prompts?
+
+A: Large knowledge bases exceed context windows and increase cost and latency.
+
+---
+
+Q: What is an AI agent?
+
+A: An AI agent is a system that can reason, make decisions, use tools, and execute actions toward a goal.
+
+---
+
+Q: What is Agentic AI?
+
+A: Agentic AI refers to AI systems capable of planning, tool usage, reasoning, and multi-step decision making.
+
+---
+
+Q: What exposure do you have to Agentic AI?
+
+A: I completed GenAI and Agentic AI training during my Cognizant internship.
+
+---
+
+Q: What is Explainable AI (XAI)?
+
+A: Explainable AI helps users understand why a model produced a specific prediction.
+
+---
+
+Q: Why is Explainable AI important?
+
+A: It increases transparency, trust, accountability, and adoption of AI systems.
+
+---
+
+Q: Which Explainable AI technique did you use?
+
+A: SHAP.
+
+---
+
+Q: What is SHAP?
+
+A: SHAP explains predictions by measuring the contribution of individual features.
+
+---
+
+Q: Where did you use SHAP?
+
+A: In the AI-Based Symptom Diagnosis System.
+
+---
+
+Q: How did SHAP improve your diagnosis system?
+
+A: It allowed users to see which symptoms contributed most to a disease prediction.
+
+---
+
+Q: What machine learning model did you use?
+
+A: Random Forest.
+
+---
+
+Q: Why Random Forest?
+
+A: It achieved better accuracy and integrated well with SHAP explainability.
+
+---
+
+Q: What accuracy did your model achieve?
+
+A: 92.28%.
+
+---
+
+Q: What dataset did you use?
+
+A: A Kaggle healthcare dataset containing over 246,000 patient records.
+
+---
+
+Q: What is feature engineering?
+
+A: Feature engineering is the process of creating or transforming variables to improve model performance.
+
+---
+
+Q: What feature engineering techniques did you use?
+
+A: Symptom normalization, fuzzy matching, synonym mapping, and preprocessing techniques.
+
+---
+
+Q: What is fuzzy matching?
+
+A: Fuzzy matching identifies similar text values even when they are not exact matches.
+
+---
+
+Q: Why use fuzzy matching?
+
+A: Real-world users often describe symptoms differently.
+
+---
+
+Q: What is synonym mapping?
+
+A: Synonym mapping converts multiple equivalent symptom descriptions into a standardized representation.
+
+---
+
+Q: What did AI projects teach you?
+
+A: They taught me problem formulation, data preparation, explainability, retrieval systems, prompt engineering, and how to build trustworthy AI solutions.

@@ -1,0 +1,62 @@
+# Personal Profile
+
+Name: Harsh Jaiswal
+
+Current Role:
+Final-year Computer Science and Engineering student and aspiring Full Stack AI Engineer.
+
+Location:
+Kolkata, India
+
+Relocation:
+Open to relocate anywhere in India, including Bangalore, Pune, Hyderabad, Chennai, Mumbai, Gurgaon, Noida, and Kolkata.
+
+Education:
+B.Tech in Computer Science and Engineering from B.P. Poddar Institute of Management and Technology (BPPIMT), Kolkata.
+
+Graduation:
+May 2026
+
+Joining Availability:
+Available to join after July 2026.
+
+Academic Performance:
+GPA: 9.24 / 10.00
+
+Academic Achievement:
+Overall B.Tech Topper for 3 consecutive years.
+
+Professional Summary:
+
+Harsh Jaiswal is a Full Stack Developer and AI/ML enthusiast with experience building microservices-based applications, cloud-native systems, AI-powered products, and Retrieval-Augmented Generation (RAG) solutions.
+
+His technical expertise spans Java, Spring Boot, Angular, FastAPI, AWS, AI/ML, Generative AI, and cloud-native application development.
+
+During his internship at Cognizant, he worked on a large-scale fashion e-commerce platform built using microservices architecture. He was responsible for the Eureka Server, API Gateway, Catalog Service, and a significant portion of the Angular frontend.
+
+Harsh has built several projects including a production-style RAG-powered AI chatbot, an AI-based symptom diagnosis system, a cloud-native employee directory on AWS, a Spring Boot e-commerce backend, TechGranny, and GameHub.
+
+He is passionate about solving real-world problems using technology and is particularly interested in Full Stack Engineering, Artificial Intelligence, Generative AI, and Cloud Technologies.
+
+Career Objective:
+
+To build products that improve people's daily lives, continuously grow as an engineer, mentor future developers, and become capable of designing and building complex software systems at scale.
+
+Interests:
+
+* Technology
+* Artificial Intelligence
+* Software Engineering
+* Reading self-help books
+* Art and sketching
+* Music
+* Personal growth and self-improvement
+
+Favorite Books:
+
+* Ikigai
+* Don't Believe Everything You Feel
+
+Personal Philosophy:
+
+Continuous improvement is more important than perfection. Harsh believes in becoming a better version of himself every day by investing in learning, discipline, and consistent execution.
