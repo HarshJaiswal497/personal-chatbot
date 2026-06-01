@@ -1,0 +1,167 @@
+<div class="jd-page">
+
+  <div class="jd-header">
+    <div class="header-tag">Feature</div>
+    <h1 class="page-title">JD <span class="accent">Matcher</span></h1>
+    <p class="page-sub">Paste any job description — get an instant MATCH / PARTIAL / GAP breakdown against Harsh's profile</p>
+  </div>
+
+  <div class="jd-layout">
+
+    <!-- ── Left: Input ── -->
+    <div class="input-panel">
+      <div class="panel-header">
+        <span class="panel-label">Job Description</span>
+        @if (jdText().length > 0) {
+          <span class="char-count">{{ jdText().length }} chars</span>
+        }
+      </div>
+
+      <textarea
+        class="jd-textarea"
+        [value]="jdText()"
+        (input)="onInput($event)"
+        placeholder="Paste the full job description here...
+
+We're looking for a Full Stack Developer with experience in Java, Spring Boot, Angular, REST APIs, microservices, and cloud platforms (AWS/GCP). Familiarity with CI/CD, Docker, and AI/ML is a strong plus."
+        [disabled]="isLoading()"
+      ></textarea>
+
+      <div class="input-footer">
+        <div class="input-actions">
+          <button
+            class="analyze-btn"
+            (click)="analyze()"
+            [disabled]="jdText().trim().length < 50 || isLoading()"
+          >
+            @if (isLoading()) {
+              <span class="btn-spinner"></span>
+              <span>Analyzing...</span>
+            } @else {
+              <span>Analyze Fit</span>
+              <span class="btn-arrow">→</span>
+            }
+          </button>
+
+          @if (jdText() || result()) {
+            <button class="clear-btn" (click)="clear()" [disabled]="isLoading()">Clear</button>
+          }
+        </div>
+
+        @if (jdText().trim().length > 0 && jdText().trim().length < 50) {
+          <p class="input-hint warn">Paste a fuller job description for better results</p>
+        } @else {
+          <p class="input-hint">Tip: paste the complete JD for the most accurate analysis</p>
+        }
+      </div>
+
+      @if (error()) {
+        <div class="error-box">⚠ {{ error() }}</div>
+      }
+    </div>
+
+    <!-- ── Right: Results ── -->
+    <div class="result-panel">
+
+      @if (!result() && !isLoading()) {
+        <div class="empty-result">
+          <div class="empty-icon">⌖</div>
+          <p class="empty-title">Ready to analyze</p>
+          <p class="empty-sub">Paste a job description on the left and click Analyze Fit</p>
+          <div class="example-tags">
+            <span>Spring Boot</span>
+            <span>Angular</span>
+            <span>Microservices</span>
+            <span>AWS</span>
+            <span>RAG</span>
+          </div>
+        </div>
+      }
+
+      @if (isLoading()) {
+        <div class="loading-result">
+          <div class="loading-orb"></div>
+          <p class="loading-text">Matching JD against Harsh's profile...</p>
+          <div class="skeleton-lines">
+            <div class="sk-line w80"></div>
+            <div class="sk-line w60"></div>
+            <div class="sk-line w90"></div>
+            <div class="sk-line w50"></div>
+            <div class="sk-line w75"></div>
+          </div>
+        </div>
+      }
+
+      @if (result() && !isLoading()) {
+        <div class="result-content">
+
+          <!-- Summary bar -->
+          <div class="summary-bar">
+            <div class="summary-chip match">
+              <span class="chip-count">{{ matchCount }}</span>
+              <span class="chip-label">Match</span>
+            </div>
+            <div class="summary-chip partial">
+              <span class="chip-count">{{ partialCount }}</span>
+              <span class="chip-label">Partial</span>
+            </div>
+            <div class="summary-chip gap">
+              <span class="chip-count">{{ gapCount }}</span>
+              <span class="chip-label">Gap</span>
+            </div>
+            <div class="summary-score">
+              <span class="score-num">{{ (result().score * 100).toFixed(0) }}%</span>
+              <span class="score-label">confidence</span>
+            </div>
+          </div>
+
+          <!-- Requirements extracted -->
+          <div class="result-section">
+            <h3 class="section-label">
+              <span class="label-dot"></span>
+              Extracted Requirements
+            </h3>
+            <div class="requirements-box">{{ result().requirements }}</div>
+          </div>
+
+          <!-- Fit analysis -->
+          <div class="result-section">
+            <h3 class="section-label">
+              <span class="label-dot"></span>
+              Fit Analysis
+            </h3>
+            <div class="analysis-list">
+              @for (line of getMatchLines(); track line.text) {
+                @if (line.type !== 'overall') {
+                  <div class="analysis-row" [class]="line.type">
+                    <span class="row-badge" [class]="line.type">
+                      @if (line.type === 'match')   { ✓ }
+                      @if (line.type === 'partial') { ◑ }
+                      @if (line.type === 'gap')     { ✗ }
+                    </span>
+                    <p class="row-text">{{ line.text }}</p>
+                  </div>
+                }
+              }
+            </div>
+          </div>
+
+          <!-- Overall verdict -->
+          @if (overallLine) {
+            <div class="verdict-box">
+              <span class="verdict-label">Verdict</span>
+              <p class="verdict-text">{{ overallLine }}</p>
+            </div>
+          }
+
+          <!-- Sources -->
+          <div class="result-meta">
+            Sources: {{ result().sources?.join(', ') }}
+          </div>
+
+        </div>
+      }
+
+    </div>
+  </div>
+</div>

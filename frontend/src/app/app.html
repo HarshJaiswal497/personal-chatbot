@@ -1,0 +1,20 @@
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-dot"></span>
+    <span>HJ<span class="nav-accent">.</span>ai</span>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/chat" routerLinkActive="active">Chat</a>
+    <a routerLink="/jd-match" routerLinkActive="active">JD Match</a>
+    @if (auth.isLoggedIn()) {
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <button class="nav-logout" (click)="auth.logout()">Logout</button>
+    } @else {
+      <a routerLink="/login" routerLinkActive="active" class="nav-login">Admin</a>
+    }
+  </div>
+</nav>
+
+<main class="main-content">
+  <router-outlet />
+</main>

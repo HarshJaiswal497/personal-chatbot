@@ -1,0 +1,78 @@
+<div class="chat-page">
+  <!-- Hero header (shown when no messages) -->
+  @if (messages().length === 0) {
+    <div class="chat-hero">
+      <div class="hero-avatar">HJ</div>
+      <h1 class="hero-title">Ask me anything about <span class="hero-accent">Harsh Jaiswal</span></h1>
+      <p class="hero-sub">Full Stack Developer · AI/ML Enthusiast · B.Tech Topper · Cognizant Intern</p>
+
+      <div class="suggestions">
+        @for (s of suggestions; track s) {
+          <button class="suggestion-chip" (click)="setInput(s)">{{ s }}</button>
+        }
+      </div>
+    </div>
+  }
+
+  <!-- Messages -->
+  @if (messages().length > 0) {
+    <div class="messages">
+      @for (msg of messages(); track msg.id) {
+        <div class="message" [class.user]="msg.role === 'user'" [class.assistant]="msg.role === 'assistant'" [class.error-msg]="msg.error">
+
+          @if (msg.role === 'assistant') {
+            <div class="msg-avatar">HJ</div>
+          }
+
+          <div class="msg-bubble">
+            @if (msg.loading) {
+              <div class="typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+            } @else {
+              <p class="msg-text">{{ msg.content }}</p>
+              @if (msg.score && msg.role === 'assistant' && !msg.error) {
+                <div class="msg-meta">
+                  <span class="score-badge" [class.high]="msg.score > 0.7" [class.mid]="msg.score > 0.5 && msg.score <= 0.7">
+                    {{ (msg.score * 100).toFixed(0) }}% match
+                  </span>
+                </div>
+              }
+            }
+          </div>
+        </div>
+      }
+      <div #messagesEnd></div>
+    </div>
+  }
+
+  <!-- Input area -->
+  <div class="input-area">
+    @if (messages().length > 0) {
+      <button class="clear-btn" (click)="clearChat()" title="Clear chat">↺</button>
+    }
+    <div class="input-wrapper">
+      <textarea
+        class="chat-input"
+        [(ngModel)]="input"
+        [ngModelOptions]="{ standalone: true }"
+        (keydown)="onKeydown($event)"
+        placeholder="Ask about Harsh's skills, projects, experience..."
+        rows="1"
+        [disabled]="isLoading()"
+      ></textarea>
+      <button
+        class="send-btn"
+        (click)="send()"
+        [disabled]="!input().trim() || isLoading()"
+      >
+        @if (isLoading()) {
+          <span class="sending-dot"></span>
+        } @else {
+          ↑
+        }
+      </button>
+    </div>
+    <p class="input-hint">Enter to send · Shift+Enter for new line</p>
+  </div>
+</div>
