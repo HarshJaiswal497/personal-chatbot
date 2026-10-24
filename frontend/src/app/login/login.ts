@@ -1,11 +1,11 @@
-import { Component, signal, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, signal, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth';
+import { CompanionComponent, Mood } from '../companion/companion';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [CompanionComponent],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
@@ -16,6 +16,22 @@ export class LoginComponent {
   password  = signal('');
   isLoading = signal(false);
   error     = signal('');
+  focused   = signal(false);
+  success   = signal(false);
+
+  // Covers its eyes while you type the password; peeks again on blur
+  mood = computed<Mood>(() => {
+    if (this.success()) return 'happy';
+    if (this.error()) return 'sad';
+    if (this.isLoading()) return 'thinking';
+    if (this.focused()) return 'shy';
+    return 'idle';
+  });
+
+  onInput(e: Event) {
+    this.password.set((e.target as HTMLInputElement).value);
+    if (this.error()) this.error.set('');
+  }
 
   login() {
     const pwd = this.password().trim();
@@ -27,10 +43,11 @@ export class LoginComponent {
     this.auth.login(pwd).subscribe({
       next: (res) => {
         this.auth.saveToken(res.token);
-        this.router.navigate(['/dashboard']);
+        this.success.set(true);
+        setTimeout(() => this.router.navigate(['/dashboard']), 700);
       },
       error: () => {
-        this.error.set('Incorrect password.');
+        this.error.set('That’s not it. Try again?');
         this.isLoading.set(false);
         this.password.set('');
       }

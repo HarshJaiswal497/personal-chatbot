@@ -1,6 +1,6 @@
 import { Component, signal, inject, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ApiService } from '../services/api';
+import { CompanionComponent } from '../companion/companion';
 
 interface Gap {
   id:        string;
@@ -11,7 +11,7 @@ interface Gap {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [FormsModule],
+  imports: [CompanionComponent],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
@@ -87,5 +87,11 @@ export class DashboardComponent implements OnInit {
     const s = this.stats();
     if (!s || s.total_queries === 0) return '0';
     return (s.answer_rate * 100).toFixed(0);
+  }
+
+  get avgScore(): string {
+    const s = this.stats();
+    if (!s || s.total_queries === 0) return '0';
+    return (s.avg_score * 100).toFixed(0);
   }
 }

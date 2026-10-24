@@ -1,1 +1,110 @@
-<p>dashboard works!</p>
+<div class="dash-page">
+
+  <header class="intro">
+    <div>
+      <span class="eyebrow">Dashboard</span>
+      <h1 class="display">Hi Harsh. Here’s how your <em>twin</em> is doing.</h1>
+    </div>
+    <button class="btn btn-ghost" (click)="loadAll()" [disabled]="isLoading()">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 4v4.5H16"/></svg>
+      Refresh
+    </button>
+  </header>
+
+  <!-- ── Stat tiles ── -->
+  <section class="tiles">
+    <div class="tile glass" style="--i: 0">
+      <span class="tile-label">Questions asked</span>
+      <span class="tile-num display">{{ stats()?.total_queries ?? '–' }}</span>
+      <span class="tile-foot">all time</span>
+    </div>
+    <div class="tile glass" style="--i: 1">
+      <span class="tile-label">Answer rate</span>
+      <span class="tile-num display">{{ answerRate }}<small>%</small></span>
+      <div class="meter" aria-hidden="true"><i [style.width.%]="answerRate"></i></div>
+      <span class="tile-foot">{{ stats()?.answered ?? 0 }} answered · {{ stats()?.unanswered ?? 0 }} not</span>
+    </div>
+    <div class="tile glass" style="--i: 2">
+      <span class="tile-label">Avg. retrieval match</span>
+      <span class="tile-num display">{{ avgScore }}<small>%</small></span>
+      <span class="tile-foot">cosine similarity of best chunk</span>
+    </div>
+    <div class="tile glass accent" style="--i: 3">
+      <span class="tile-label">Waiting for you</span>
+      <span class="tile-num display">{{ gaps().length }}</span>
+      <span class="tile-foot">{{ gaps().length === 1 ? 'question to teach' : 'questions to teach' }}</span>
+    </div>
+  </section>
+
+  <div class="columns">
+
+    <!-- ── Gaps ── -->
+    <section class="gaps">
+      <div class="section-head">
+        <h2 class="display">Questions I couldn’t answer</h2>
+        <p>Write the answer in your own words. I’ll re-learn straight away.</p>
+      </div>
+
+      @if (isLoading()) {
+        <div class="skeleton-card glass"></div>
+        <div class="skeleton-card glass"></div>
+      } @else {
+        @for (gap of gaps(); track gap.id; let i = $index) {
+          <article class="gap glass" [class.learned]="successId() === gap.id" [style.--i]="i">
+            @if (successId() === gap.id) {
+              <div class="learned-msg">
+                <app-companion mood="happy" [size]="48" />
+                <span>Learned it! Updating my memory…</span>
+              </div>
+            } @else {
+              <div class="gap-top">
+                <p class="gap-q">“{{ gap.question }}”</p>
+                <span class="gap-time">{{ formatDate(gap.timestamp) }}</span>
+              </div>
+              <textarea
+                rows="2"
+                [value]="getAnswer(gap.id)"
+                (input)="setAnswer(gap.id, $any($event.target).value)"
+                placeholder="Teach me… e.g. “Harsh’s favourite food is…”"
+                [attr.aria-label]="'Answer for: ' + gap.question"
+              ></textarea>
+              <div class="gap-actions">
+                <button class="text-btn" (click)="dismiss(gap.id)" [disabled]="savingId() === gap.id">Dismiss</button>
+                <button class="btn btn-primary small" (click)="saveAnswer(gap)" [disabled]="!getAnswer(gap.id).trim() || savingId() === gap.id">
+                  @if (savingId() === gap.id) { Saving… } @else { Teach my twin }
+                </button>
+              </div>
+            }
+          </article>
+        } @empty {
+          <div class="all-clear glass">
+            <app-companion mood="happy" [size]="96" />
+            <p class="display">All caught up!</p>
+            <span>No unanswered questions right now.</span>
+          </div>
+        }
+      }
+    </section>
+
+    <!-- ── Recent ── -->
+    <section class="recent">
+      <div class="section-head">
+        <h2 class="display">Recently asked</h2>
+        <p>The last ten questions visitors asked.</p>
+      </div>
+      <ul class="recent-list glass">
+        @for (q of stats()?.recent_queries ?? []; track $index) {
+          <li>
+            <span class="status-pill" [class.match]="q.answered" [class.gap]="!q.answered">
+              {{ q.answered ? '✓ answered' : '✕ missed' }}
+            </span>
+            <span class="recent-q">{{ q.query }}</span>
+            <span class="recent-meta">{{ (q.score * 100).toFixed(0) }}% · {{ formatDate(q.timestamp) }}</span>
+          </li>
+        } @empty {
+          <li class="recent-empty">No questions yet. Share the link!</li>
+        }
+      </ul>
+    </section>
+  </div>
+</div>

@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="login-page">
+  <div class="card glass" [class.shake]="error()">
+    <app-companion [mood]="mood()" [size]="128" [track]="true" />
+
+    <h1 class="display">Welcome back, <em>Harsh</em></h1>
+    <p class="sub">The dashboard is where you teach your twin the questions it couldn’t answer.</p>
+
+    <label class="field">
+      <span class="field-label">Password</span>
+      <input
+        type="password"
+        autocomplete="current-password"
+        [value]="password()"
+        (input)="onInput($event)"
+        (keydown)="onKeydown($event)"
+        (focus)="focused.set(true)"
+        (blur)="focused.set(false)"
+        [disabled]="isLoading()"
+        placeholder="••••••••"
+      />
+    </label>
+
+    <p class="error" aria-live="polite">{{ error() }}</p>
+
+    <button class="btn btn-primary" (click)="login()" [disabled]="!password().trim() || isLoading()">
+      @if (isLoading()) { Checking… } @else { Open dashboard }
+    </button>
+
+    <p class="peek">Don’t worry, I’m not looking 🙈</p>
+  </div>
+</div>

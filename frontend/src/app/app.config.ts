@@ -7,7 +7,8 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes, withViewTransitions()),
+    // Skip the first-load crossfade so page entrance animations run on their own
+    provideRouter(routes, withViewTransitions({ skipInitialTransition: true })),
     provideHttpClient(withFetch()),
   ]
 };

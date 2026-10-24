@@ -1,0 +1,100 @@
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(1180px, 100%);
+  height: 54px;
+  padding: 0 8px 0 10px;
+  border-radius: 999px;
+  animation: rise-in 0.7s var(--ease-out) both;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px 0 4px;
+  text-decoration: none;
+}
+.brand-word {
+  font-family: var(--font-display);
+  font-variation-settings: 'SOFT' 100, 'opsz' 48;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.brand-word em { font-style: italic; color: var(--accent); }
+.brand app-companion { transition: transform 0.5s var(--ease-spring); }
+.brand:hover app-companion { transform: rotate(-12deg) scale(1.12); }
+
+.links {
+  display: flex;
+  gap: 2px;
+  margin: 0 auto;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+}
+.links a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: background 0.35s var(--ease-out), color 0.25s, box-shadow 0.35s;
+}
+.links a:hover { color: var(--ink); }
+.links a.active {
+  background: var(--card-solid);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(43, 38, 51, 0.08), 0 4px 12px -4px rgba(43, 38, 51, 0.15);
+}
+
+.actions { display: flex; align-items: center; gap: 4px; }
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--ink-2);
+  transition: background 0.25s, color 0.25s, transform 0.5s var(--ease-spring);
+}
+.icon-btn:hover { background: var(--paper-2); color: var(--ink); transform: rotate(18deg); }
+
+.text-btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+.text-btn:hover, .text-btn.active { background: var(--paper-2); color: var(--ink); }
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .nav { padding: 0 6px; gap: 2px; }
+  .brand-word { display: none; }
+  .links a { padding: 6px 11px; font-size: 13px; }
+  .text-btn { padding: 8px 10px; font-size: 13px; }
+}

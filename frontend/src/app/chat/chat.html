@@ -1,78 +1,120 @@
 <div class="chat-page">
-  <!-- Hero header (shown when no messages) -->
-  @if (messages().length === 0) {
-    <div class="chat-hero">
-      <div class="hero-avatar">HJ</div>
-      <h1 class="hero-title">Ask me anything about <span class="hero-accent">Harsh Jaiswal</span></h1>
-      <p class="hero-sub">Full Stack Developer · AI/ML Enthusiast · B.Tech Topper · Cognizant Intern</p>
 
-      <div class="suggestions">
-        @for (s of suggestions; track s) {
-          <button class="suggestion-chip" (click)="setInput(s)">{{ s }}</button>
+  <!-- ── Stage: the companion lives here and reacts to the conversation ── -->
+  <aside class="stage">
+    <div class="stage-inner">
+      <div class="companion-spot">
+        <app-companion [mood]="mood()" [size]="210" [track]="true" />
+      </div>
+
+      <div class="caption-slot" aria-live="polite">
+        @for (c of [caption()]; track c) {
+          <p class="caption display">{{ c }}</p>
         }
       </div>
+
+      <div class="about glass">
+        <p class="about-kicker eyebrow">You’re talking to</p>
+        <p class="about-name display">Harsh’s AI twin</p>
+        <p class="about-role">Full-stack developer · AI/ML · Spring Boot &amp; Angular · ex-Cognizant intern</p>
+        <a class="about-link" routerLink="/jd-match">
+          Have a job description? Check the fit
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
-  }
+  </aside>
 
-  <!-- Messages -->
-  @if (messages().length > 0) {
-    <div class="messages">
-      @for (msg of messages(); track msg.id) {
-        <div class="message" [class.user]="msg.role === 'user'" [class.assistant]="msg.role === 'assistant'" [class.error-msg]="msg.error">
+  <!-- ── Conversation ── -->
+  <section class="conversation">
+    <div class="scroller" #scroller>
 
-          @if (msg.role === 'assistant') {
-            <div class="msg-avatar">HJ</div>
-          }
+      @if (messages().length === 0) {
+        <div class="welcome">
+          <span class="eyebrow">Hello there</span>
+          <h1 class="welcome-title display">
+            Ask me anything<br>about <em>Harsh</em>
+            <svg class="squiggle" viewBox="0 0 220 18" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M2 12 C 30 2, 50 18, 80 9 S 130 2, 160 10 S 200 14, 218 6" />
+            </svg>
+          </h1>
+          <p class="welcome-sub">His projects, skills, internship, studies, or what he’s looking for next. Pick a starter or ask your own.</p>
 
-          <div class="msg-bubble">
-            @if (msg.loading) {
-              <div class="typing-dots">
-                <span></span><span></span><span></span>
-              </div>
-            } @else {
-              <p class="msg-text">{{ msg.content }}</p>
-              @if (msg.score && msg.role === 'assistant' && !msg.error) {
-                <div class="msg-meta">
-                  <span class="score-badge" [class.high]="msg.score > 0.7" [class.mid]="msg.score > 0.5 && msg.score <= 0.7">
-                    {{ (msg.score * 100).toFixed(0) }}% match
-                  </span>
-                </div>
-              }
+          <div class="starters">
+            @for (s of suggestions; track s.text; let i = $index) {
+              <button class="starter" [attr.data-tone]="s.tone" [style.--i]="i" (click)="ask(s.text)">
+                <span class="starter-icon">{{ s.icon }}</span>
+                <span class="starter-text">{{ s.text }}</span>
+              </button>
             }
           </div>
         </div>
-      }
-      <div #messagesEnd></div>
-    </div>
-  }
+      } @else {
+        <div class="messages">
+          @for (msg of messages(); track msg.id) {
+            @if (msg.role === 'user') {
+              <div class="msg user">
+                <p class="bubble">{{ msg.content }}</p>
+              </div>
+            } @else {
+              <div class="msg assistant" [class.error]="msg.error" [class.unknown]="msg.unknown">
+                <app-companion class="mini" [size]="34" [still]="true"
+                  [mood]="msg.error ? 'sad' : msg.unknown ? 'confused' : 'idle'" />
+                <div class="answer">
+                  @if (msg.loading) {
+                    <div class="thinking" aria-label="Thinking">
+                      <span></span><span></span><span></span>
+                    </div>
+                  } @else {
+                    <div class="prose" [class.streaming]="msg.streaming" [innerHTML]="msg.html ?? msg.content"></div>
 
-  <!-- Input area -->
-  <div class="input-area">
-    @if (messages().length > 0) {
-      <button class="clear-btn" (click)="clearChat()" title="Clear chat">↺</button>
-    }
-    <div class="input-wrapper">
-      <textarea
-        class="chat-input"
-        [(ngModel)]="input"
-        [ngModelOptions]="{ standalone: true }"
-        (keydown)="onKeydown($event)"
-        placeholder="Ask about Harsh's skills, projects, experience..."
-        rows="1"
-        [disabled]="isLoading()"
-      ></textarea>
-      <button
-        class="send-btn"
-        (click)="send()"
-        [disabled]="!input().trim() || isLoading()"
-      >
-        @if (isLoading()) {
-          <span class="sending-dot"></span>
-        } @else {
-          ↑
-        }
-      </button>
+                    @if (msg.score && !msg.error && !msg.unknown && !msg.streaming) {
+                      <div class="meta">
+                        <span class="confidence" [title]="'Retrieval similarity ' + (msg.score * 100).toFixed(0) + '%'">
+                          <span class="dots">
+                            @for (on of confidenceDots(msg.score); track $index) {
+                              <i [class.on]="on"></i>
+                            }
+                          </span>
+                          {{ confidenceWord(msg.score) }}
+                        </span>
+                        @for (src of msg.sources?.slice(0, 3); track src) {
+                          <span class="chip">{{ sourceLabel(src) }}</span>
+                        }
+                      </div>
+                    }
+                  }
+                </div>
+              </div>
+            }
+          }
+        </div>
+      }
     </div>
-    <p class="input-hint">Enter to send · Shift+Enter for new line</p>
-  </div>
+
+    <!-- ── Composer ── -->
+    <div class="composer-wrap">
+      <div class="composer glass" [class.busy]="isLoading()">
+        @if (messages().length > 0) {
+          <button class="new-chat" (click)="clearChat()" [disabled]="isLoading()" title="Start a new chat" aria-label="Start a new chat">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4v4.5H8"/></svg>
+          </button>
+        }
+        <textarea
+          #composer
+          rows="1"
+          [value]="input()"
+          (input)="onInput($event)"
+          (keydown)="onKeydown($event)"
+          [disabled]="isLoading()"
+          placeholder="Ask about Harsh’s projects, skills…"
+          aria-label="Your question"
+        ></textarea>
+        <button class="send" (click)="send()" [disabled]="!input().trim() || isLoading()" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+        </button>
+      </div>
+      <p class="hint">Enter to send · Shift + Enter for a new line</p>
+    </div>
+  </section>
 </div>

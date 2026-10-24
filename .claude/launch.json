@@ -9,6 +9,14 @@
       "port": 8000,
       "autoPort": false,
       "url": "http://localhost:8000"
+    },
+    {
+      "name": "frontend",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["ng", "serve", "--port", "4200"],
+      "cwd": "frontend",
+      "port": 4200,
+      "autoPort": false
     }
   ]
 }

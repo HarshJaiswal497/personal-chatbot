@@ -1,167 +1,174 @@
 <div class="jd-page">
 
-  <div class="jd-header">
-    <div class="header-tag">Feature</div>
-    <h1 class="page-title">JD <span class="accent">Matcher</span></h1>
-    <p class="page-sub">Paste any job description — get an instant MATCH / PARTIAL / GAP breakdown against Harsh's profile</p>
-  </div>
+  <header class="intro">
+    <span class="eyebrow">JD Matcher</span>
+    <h1 class="display">How well does Harsh fit <em>your</em> role?</h1>
+    <p class="intro-sub">Paste a job description. I’ll pull out every requirement and check it against Harsh’s projects, internship and skills, with evidence for each.</p>
+  </header>
 
-  <div class="jd-layout">
+  <div class="layout">
 
-    <!-- ── Left: Input ── -->
-    <div class="input-panel">
-      <div class="panel-header">
-        <span class="panel-label">Job Description</span>
+    <!-- ── Paste card ── -->
+    <section class="paste glass">
+      <div class="paste-head">
+        <span class="label">Job description</span>
         @if (jdText().length > 0) {
-          <span class="char-count">{{ jdText().length }} chars</span>
+          <span class="count">{{ jdText().length }} chars</span>
+        } @else {
+          <button class="sample" (click)="useSample()">Try a sample JD</button>
         }
       </div>
 
       <textarea
-        class="jd-textarea"
         [value]="jdText()"
         (input)="onInput($event)"
-        placeholder="Paste the full job description here...
-
-We're looking for a Full Stack Developer with experience in Java, Spring Boot, Angular, REST APIs, microservices, and cloud platforms (AWS/GCP). Familiarity with CI/CD, Docker, and AI/ML is a strong plus."
         [disabled]="isLoading()"
+        placeholder="Paste the full job description here…"
+        aria-label="Job description"
       ></textarea>
 
-      <div class="input-footer">
-        <div class="input-actions">
-          <button
-            class="analyze-btn"
-            (click)="analyze()"
-            [disabled]="jdText().trim().length < 50 || isLoading()"
-          >
-            @if (isLoading()) {
-              <span class="btn-spinner"></span>
-              <span>Analyzing...</span>
-            } @else {
-              <span>Analyze Fit</span>
-              <span class="btn-arrow">→</span>
+      <div class="paste-foot">
+        @if (jdText().trim().length > 0 && jdText().trim().length < 50) {
+          <p class="hint warn">A little more text, please. Paste the full JD.</p>
+        } @else {
+          <p class="hint">The fuller the JD, the better the match.</p>
+        }
+        <div class="buttons">
+          @if (jdText() || result()) {
+            <button class="btn btn-ghost" (click)="clear()" [disabled]="isLoading()">Clear</button>
+          }
+          <button class="btn btn-primary" (click)="analyze()" [disabled]="jdText().trim().length < 50 || isLoading()">
+            @if (isLoading()) { Analyzing… } @else {
+              Analyze fit
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             }
           </button>
-
-          @if (jdText() || result()) {
-            <button class="clear-btn" (click)="clear()" [disabled]="isLoading()">Clear</button>
-          }
         </div>
-
-        @if (jdText().trim().length > 0 && jdText().trim().length < 50) {
-          <p class="input-hint warn">Paste a fuller job description for better results</p>
-        } @else {
-          <p class="input-hint">Tip: paste the complete JD for the most accurate analysis</p>
-        }
       </div>
+    </section>
+
+    <!-- ── Results ── -->
+    <section class="results">
 
       @if (error()) {
-        <div class="error-box">⚠ {{ error() }}</div>
-      }
-    </div>
-
-    <!-- ── Right: Results ── -->
-    <div class="result-panel">
-
-      @if (!result() && !isLoading()) {
-        <div class="empty-result">
-          <div class="empty-icon">⌖</div>
-          <p class="empty-title">Ready to analyze</p>
-          <p class="empty-sub">Paste a job description on the left and click Analyze Fit</p>
-          <div class="example-tags">
-            <span>Spring Boot</span>
-            <span>Angular</span>
-            <span>Microservices</span>
-            <span>AWS</span>
-            <span>RAG</span>
-          </div>
+        <div class="state glass">
+          <app-companion mood="sad" [size]="110" />
+          <p class="state-title display">That didn’t work</p>
+          <p class="state-sub">{{ error() }}</p>
         </div>
-      }
-
-      @if (isLoading()) {
-        <div class="loading-result">
-          <div class="loading-orb"></div>
-          <p class="loading-text">Matching JD against Harsh's profile...</p>
-          <div class="skeleton-lines">
-            <div class="sk-line w80"></div>
-            <div class="sk-line w60"></div>
-            <div class="sk-line w90"></div>
-            <div class="sk-line w50"></div>
-            <div class="sk-line w75"></div>
-          </div>
-        </div>
-      }
-
-      @if (result() && !isLoading()) {
-        <div class="result-content">
-
-          <!-- Summary bar -->
-          <div class="summary-bar">
-            <div class="summary-chip match">
-              <span class="chip-count">{{ matchCount }}</span>
-              <span class="chip-label">Match</span>
-            </div>
-            <div class="summary-chip partial">
-              <span class="chip-count">{{ partialCount }}</span>
-              <span class="chip-label">Partial</span>
-            </div>
-            <div class="summary-chip gap">
-              <span class="chip-count">{{ gapCount }}</span>
-              <span class="chip-label">Gap</span>
-            </div>
-            <div class="summary-score">
-              <span class="score-num">{{ (result().score * 100).toFixed(0) }}%</span>
-              <span class="score-label">confidence</span>
-            </div>
-          </div>
-
-          <!-- Requirements extracted -->
-          <div class="result-section">
-            <h3 class="section-label">
-              <span class="label-dot"></span>
-              Extracted Requirements
-            </h3>
-            <div class="requirements-box">{{ result().requirements }}</div>
-          </div>
-
-          <!-- Fit analysis -->
-          <div class="result-section">
-            <h3 class="section-label">
-              <span class="label-dot"></span>
-              Fit Analysis
-            </h3>
-            <div class="analysis-list">
-              @for (line of getMatchLines(); track line.text) {
-                @if (line.type !== 'overall') {
-                  <div class="analysis-row" [class]="line.type">
-                    <span class="row-badge" [class]="line.type">
-                      @if (line.type === 'match')   { ✓ }
-                      @if (line.type === 'partial') { ◑ }
-                      @if (line.type === 'gap')     { ✗ }
-                    </span>
-                    <p class="row-text">{{ line.text }}</p>
-                  </div>
-                }
-              }
-            </div>
-          </div>
-
-          <!-- Overall verdict -->
-          @if (overallLine) {
-            <div class="verdict-box">
-              <span class="verdict-label">Verdict</span>
-              <p class="verdict-text">{{ overallLine }}</p>
-            </div>
+      } @else if (isLoading()) {
+        <div class="state glass">
+          <app-companion mood="thinking" [size]="120" />
+          @for (l of [loadingLine()]; track l) {
+            <p class="state-title display loading-line">{{ l }}</p>
           }
+          <div class="skeleton">
+            <i style="--w: 86%"></i><i style="--w: 64%"></i><i style="--w: 92%"></i><i style="--w: 52%"></i>
+          </div>
+        </div>
+      } @else if (analysis(); as a) {
 
-          <!-- Sources -->
-          <div class="result-meta">
-            Sources: {{ result().sources?.join(', ') }}
+        <!-- Scorecard -->
+        <div class="scorecard glass">
+          <div class="ring" role="img" [attr.aria-label]="'Overall fit ' + fitPercent() + ' percent'">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-track" cx="60" cy="60" r="52" />
+              <circle class="ring-fill" cx="60" cy="60" r="52"
+                [attr.stroke-dasharray]="ringC"
+                [style.--offset]="ringOffset(fitPercent())" />
+            </svg>
+            <div class="ring-label">
+              <span class="ring-num display">{{ fitPercent() }}<small>%</small></span>
+              <span class="ring-cap">overall fit</span>
+            </div>
           </div>
 
+          <div class="score-body">
+            <div class="score-top">
+              <app-companion [mood]="mood()" [size]="54" />
+              <p class="verdict display">
+                @if (a.summary) { {{ a.summary }} }
+                @else if (fitPercent() >= 70) { A strong fit. Harsh ticks most of the boxes. }
+                @else if (fitPercent() >= 45) { A solid partial fit, with some gaps to talk through. }
+                @else { More gaps than matches for this one. }
+              </p>
+            </div>
+
+            @if (counts().total) {
+              <div class="bar" aria-hidden="true">
+                @if (counts().match)   { <span class="seg match"   [style.flex-grow]="counts().match"></span> }
+                @if (counts().partial) { <span class="seg partial" [style.flex-grow]="counts().partial"></span> }
+                @if (counts().gap)     { <span class="seg gap"     [style.flex-grow]="counts().gap"></span> }
+              </div>
+              <div class="legend">
+                <span class="status-pill match">✓ {{ counts().match }} match</span>
+                <span class="status-pill partial">◐ {{ counts().partial }} partial</span>
+                <span class="status-pill gap">✕ {{ counts().gap }} gap</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Requirement cards -->
+        @if (a.items.length) {
+          <div class="filters" role="tablist">
+            <button role="tab" [class.on]="filter() === 'all'"     (click)="filter.set('all')">All <b>{{ counts().total }}</b></button>
+            <button role="tab" [class.on]="filter() === 'match'"   (click)="filter.set('match')">Match <b>{{ counts().match }}</b></button>
+            <button role="tab" [class.on]="filter() === 'partial'" (click)="filter.set('partial')">Partial <b>{{ counts().partial }}</b></button>
+            <button role="tab" [class.on]="filter() === 'gap'"     (click)="filter.set('gap')">Gap <b>{{ counts().gap }}</b></button>
+          </div>
+
+          <div class="reqs">
+            @for (item of visibleItems(); track item.name + item.verdict; let i = $index) {
+              <article class="req" [attr.data-verdict]="item.verdict" [style.--i]="i">
+                <div class="req-head">
+                  <h3 class="req-name">{{ item.name }}</h3>
+                  <span class="status-pill" [class]="item.verdict">
+                    @switch (item.verdict) {
+                      @case ('match')   { ✓ Match }
+                      @case ('partial') { ◐ Partial }
+                      @case ('gap')     { ✕ Gap }
+                    }
+                  </span>
+                </div>
+                @if (item.evidence.length) {
+                  <ul class="evidence">
+                    @for (e of item.evidence; track $index) {
+                      <li [innerHTML]="renderMarkdown(e)"></li>
+                    }
+                  </ul>
+                }
+              </article>
+            } @empty {
+              <p class="none">Nothing in this group.</p>
+            }
+          </div>
+        } @else {
+          <div class="raw glass prose" [innerHTML]="renderMarkdown(a.raw)"></div>
+        }
+
+        <details class="extras">
+          <summary>Requirements I extracted from the JD</summary>
+          <div class="prose" [innerHTML]="renderMarkdown(result().requirements ?? '')"></div>
+        </details>
+
+        @if (result().sources?.length) {
+          <div class="sources">
+            <span>Evidence from</span>
+            @for (s of result().sources; track s) { <span class="chip">{{ sourceLabel(s) }}</span> }
+          </div>
+        }
+
+      } @else {
+        <div class="state glass empty">
+          <app-companion [mood]="mood()" [size]="130" [track]="true" />
+          <p class="state-title display">Ready when you are</p>
+          <p class="state-sub">Paste a JD on the left, or try the sample, and I’ll read it for you.</p>
+          <div class="tags">
+            <span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Microservices</span><span class="chip">AWS</span><span class="chip">RAG</span>
+          </div>
         </div>
       }
-
-    </div>
+    </section>
   </div>
 </div>
