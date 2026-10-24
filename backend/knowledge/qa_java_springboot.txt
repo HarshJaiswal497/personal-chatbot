@@ -1,10 +1,10 @@
-Q: Which language are you most comfortable with?
+Q: Which language is Harsh most comfortable with?
 
-A: Java is my strongest programming language. I have used Java extensively in my E-Commerce Backend project, RunWay microservices platform during my Cognizant internship, competitive programming, and various academic projects.
+A: Java is Harsh's strongest programming language. He has used Java extensively in his E-Commerce Backend project, the RunWay microservices platform during his Cognizant internship, competitive programming, and various academic projects.
 
 ---
 
-Q: Why do you like Java?
+Q: Why does Harsh like Java?
 
 A: Java provides strong object-oriented programming support, platform independence, excellent ecosystem support, robust libraries, and strong enterprise adoption. It is widely used in scalable backend systems and enterprise applications.
 
@@ -40,9 +40,9 @@ A: The four pillars of OOP are Encapsulation, Inheritance, Polymorphism, and Abs
 
 ---
 
-Q: How have you used OOP in your projects?
+Q: How has Harsh used OOP in his projects?
 
-A: In RunWay and the E-Commerce Backend, I used OOP extensively through entities, services, repositories, inheritance hierarchies, and abstraction layers to maintain clean architecture and separation of concerns.
+A: In RunWay and the E-Commerce Backend, Harsh used OOP extensively through entities, services, repositories, inheritance hierarchies, and abstraction layers to maintain clean architecture and separation of concerns.
 
 ---
 
@@ -118,7 +118,7 @@ A: Spring Boot reduces boilerplate code, accelerates development, provides produ
 
 ---
 
-Q: Where have you used Spring Boot?
+Q: Where has Harsh used Spring Boot?
 
 A: In RunWay microservices, E-Commerce REST API Backend, and multiple internship assignments during Cognizant.
 
@@ -166,7 +166,7 @@ A: REST API is an architectural style that uses HTTP methods to enable communica
 
 ---
 
-Q: Which HTTP methods have you used?
+Q: Which HTTP methods has Harsh used?
 
 A: GET, POST, PUT, PATCH, and DELETE.
 
@@ -202,13 +202,13 @@ A: ORM maps database tables to Java objects, reducing manual SQL operations.
 
 ---
 
-Q: How have you used JPA/Hibernate?
+Q: How has Harsh used JPA/Hibernate?
 
 A: In RunWay and E-Commerce Backend for entity mapping, relationships, persistence, and query execution.
 
 ---
 
-Q: What relationships have you used?
+Q: What relationships has Harsh used?
 
 A: One-to-One, One-to-Many, Many-to-One, and Many-to-Many.
 
@@ -232,7 +232,7 @@ A: JWT is a token-based authentication mechanism used for secure stateless authe
 
 ---
 
-Q: Where did you use JWT?
+Q: Where did Harsh use JWT?
 
 A: In RunWay, E-Commerce Backend, and Personal AI Chatbot admin dashboard.
 
@@ -250,7 +250,7 @@ A: Spring Security provides authentication, authorization, and security features
 
 ---
 
-Q: What security features did you implement?
+Q: What security features did Harsh implement?
 
 A: JWT authentication, role-based access control, protected APIs, route guards, and secure endpoint access.
 
@@ -286,9 +286,9 @@ A: Eureka Server is a service registry that enables dynamic service discovery in
 
 ---
 
-Q: What was your contribution to Eureka?
+Q: What was Harsh's contribution to Eureka?
 
-A: I configured and managed the Eureka Server used by all RunWay microservices.
+A: Harsh configured and managed the Eureka Server used by all RunWay microservices.
 
 ---
 
@@ -298,9 +298,9 @@ A: API Gateway acts as a single entry point for client requests and routes them 
 
 ---
 
-Q: What was your contribution to API Gateway?
+Q: What was Harsh's contribution to API Gateway?
 
-A: I developed and configured the API Gateway for RunWay.
+A: Harsh developed and configured the API Gateway for RunWay.
 
 ---
 
@@ -322,7 +322,7 @@ A: Resilience4j provides fault tolerance mechanisms such as Circuit Breakers, Re
 
 ---
 
-Q: Where did you use Resilience4j?
+Q: Where did Harsh use Resilience4j?
 
 A: In RunWay payment flows to improve fault tolerance and reliability.
 
@@ -346,12 +346,12 @@ A: Flyway is a database migration tool that manages schema changes through versi
 
 ---
 
-Q: Where did you use Flyway?
+Q: Where did Harsh use Flyway?
 
 A: In the E-Commerce Backend project for database versioning and deployment consistency.
 
 ---
 
-Q: What is the biggest Spring Boot project you built?
+Q: What is the biggest Spring Boot project Harsh built?
 
-A: RunWay, a 6-microservice fashion e-commerce platform built during my Cognizant internship.
+A: RunWay, a 6-microservice fashion e-commerce platform built during Harsh's Cognizant internship.

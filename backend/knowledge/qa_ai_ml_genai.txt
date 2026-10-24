@@ -1,6 +1,6 @@
-Q: What areas of AI have you worked on?
+Q: What areas of AI has Harsh worked on?
 
-A: I have worked on Retrieval-Augmented Generation (RAG), Large Language Model integration, Prompt Engineering, Explainable AI (XAI), Machine Learning, Vector Databases, Embedding Models, and Human-in-the-Loop AI systems.
+A: Harsh has worked on Retrieval-Augmented Generation (RAG), Large Language Model integration, Prompt Engineering, Explainable AI (XAI), Machine Learning, Vector Databases, Embedding Models, and Human-in-the-Loop AI systems.
 
 ---
 
@@ -16,9 +16,9 @@ A: A Large Language Model (LLM) is an AI model trained on massive amounts of tex
 
 ---
 
-Q: Which LLMs have you worked with?
+Q: Which LLMs has Harsh worked with?
 
-A: Through my Personal AI Chatbot and Cognizant GenAI training, I have worked with LLaMA-based models through the Groq API.
+A: Through his Personal AI Chatbot and Cognizant GenAI training, Harsh has worked with LLaMA-based models and OpenAI's open-weight GPT-OSS models (gpt-oss-20b, which now powers the chatbot) through the Groq API.
 
 ---
 
@@ -34,13 +34,13 @@ A: LLMs can hallucinate or provide outdated information. RAG grounds responses u
 
 ---
 
-Q: Why did you choose RAG for your chatbot?
+Q: Why did Harsh choose RAG for his chatbot?
 
-A: Recruiters need accurate information about my profile. RAG allows the chatbot to answer using my knowledge base rather than relying solely on model knowledge.
+A: Recruiters need accurate information about Harsh's profile. RAG allows the chatbot to answer using his knowledge base rather than relying solely on model knowledge.
 
 ---
 
-Q: Explain the architecture of your chatbot.
+Q: Explain the architecture of Harsh's chatbot.
 
 A: Knowledge Base → Chunking → Embedding Generation → ChromaDB Storage → Semantic Retrieval → Groq LLM → Final Response.
 
@@ -58,7 +58,7 @@ A: They allow semantic similarity search. Instead of matching exact keywords, th
 
 ---
 
-Q: Which embedding model do you use?
+Q: Which embedding model does Harsh use?
 
 A: all-MiniLM-L6-v2 from Sentence Transformers.
 
@@ -76,7 +76,7 @@ A: A vector database stores embeddings and enables efficient similarity search.
 
 ---
 
-Q: Which vector database did you use?
+Q: Which vector database did Harsh use?
 
 A: ChromaDB.
 
@@ -94,7 +94,7 @@ A: Semantic search retrieves information based on meaning rather than exact keyw
 
 ---
 
-Q: What chunking strategy do you use?
+Q: What chunking strategy does Harsh use?
 
 A: Chunk size of 300 characters with an overlap of 50 characters.
 
@@ -112,7 +112,7 @@ A: Cosine similarity measures how similar two vectors are by comparing the angle
 
 ---
 
-Q: How does retrieval work in your chatbot?
+Q: How does retrieval work in Harsh's chatbot?
 
 A: User query is embedded, compared against stored embeddings, and the most similar chunks are retrieved before being passed to the LLM.
 
@@ -124,15 +124,15 @@ A: Confidence gating prevents the chatbot from answering when retrieval confiden
 
 ---
 
-Q: Why did you implement confidence gating?
+Q: Why did Harsh implement confidence gating?
 
 A: To reduce hallucinations and improve trustworthiness.
 
 ---
 
-Q: What confidence threshold do you use?
+Q: What confidence threshold does Harsh use?
 
-A: 0.45.
+A: 0.35 (cosine similarity between the question and the best-matching knowledge chunk).
 
 ---
 
@@ -148,9 +148,9 @@ A: Prompt engineering is the process of designing prompts that guide LLMs toward
 
 ---
 
-Q: How did you use prompt engineering?
+Q: How did Harsh use prompt engineering?
 
-A: In the chatbot and JD matcher, I carefully structured prompts to improve retrieval grounding, answer quality, and requirement extraction.
+A: In the chatbot and JD matcher, Harsh carefully structured prompts to improve retrieval grounding, answer quality, and requirement extraction.
 
 ---
 
@@ -178,9 +178,9 @@ A: Human-in-the-Loop systems allow humans to review, correct, and improve AI out
 
 ---
 
-Q: How did you implement Human-in-the-Loop learning?
+Q: How did Harsh implement Human-in-the-Loop learning?
 
-A: Unanswered recruiter questions are stored. I later answer them manually and re-ingest them into the knowledge base.
+A: Unanswered recruiter questions are stored. Harsh later answers them manually and re-ingests them into the knowledge base.
 
 ---
 
@@ -238,9 +238,9 @@ A: Agentic AI refers to AI systems capable of planning, tool usage, reasoning, a
 
 ---
 
-Q: What exposure do you have to Agentic AI?
+Q: What exposure does Harsh have to Agentic AI?
 
-A: I completed GenAI and Agentic AI training during my Cognizant internship.
+A: Harsh completed GenAI and Agentic AI training during his Cognizant internship.
 
 ---
 
@@ -256,7 +256,7 @@ A: It increases transparency, trust, accountability, and adoption of AI systems.
 
 ---
 
-Q: Which Explainable AI technique did you use?
+Q: Which Explainable AI technique did Harsh use?
 
 A: SHAP.
 
@@ -268,19 +268,19 @@ A: SHAP explains predictions by measuring the contribution of individual feature
 
 ---
 
-Q: Where did you use SHAP?
+Q: Where did Harsh use SHAP?
 
 A: In the AI-Based Symptom Diagnosis System.
 
 ---
 
-Q: How did SHAP improve your diagnosis system?
+Q: How did SHAP improve Harsh's diagnosis system?
 
 A: It allowed users to see which symptoms contributed most to a disease prediction.
 
 ---
 
-Q: What machine learning model did you use?
+Q: What machine learning model did Harsh use?
 
 A: Random Forest.
 
@@ -292,13 +292,13 @@ A: It achieved better accuracy and integrated well with SHAP explainability.
 
 ---
 
-Q: What accuracy did your model achieve?
+Q: What accuracy did Harsh's model achieve?
 
 A: 92.28%.
 
 ---
 
-Q: What dataset did you use?
+Q: What dataset did Harsh use?
 
 A: A Kaggle healthcare dataset containing over 246,000 patient records.
 
@@ -310,7 +310,7 @@ A: Feature engineering is the process of creating or transforming variables to i
 
 ---
 
-Q: What feature engineering techniques did you use?
+Q: What feature engineering techniques did Harsh use?
 
 A: Symptom normalization, fuzzy matching, synonym mapping, and preprocessing techniques.
 
@@ -334,6 +334,6 @@ A: Synonym mapping converts multiple equivalent symptom descriptions into a stan
 
 ---
 
-Q: What did AI projects teach you?
+Q: What did AI projects teach Harsh?
 
-A: They taught me problem formulation, data preparation, explainability, retrieval systems, prompt engineering, and how to build trustworthy AI solutions.
+A: They taught Harsh problem formulation, data preparation, explainability, retrieval systems, prompt engineering, and how to build trustworthy AI solutions.

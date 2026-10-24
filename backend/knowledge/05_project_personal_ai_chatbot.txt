@@ -34,7 +34,7 @@ AI Stack:
 * ChromaDB
 * Sentence Transformers
 * Groq
-* LLaMA Models
+* GPT-OSS (gpt-oss-20b), previously LLaMA models
 * RAG Architecture
 
 Security:
@@ -141,7 +141,7 @@ Solution:
 Implemented confidence scoring.
 
 Threshold:
-0.45
+0.35 (cosine similarity)
 
 Behavior:
 

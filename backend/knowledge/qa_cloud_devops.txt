@@ -1,16 +1,16 @@
-Q: What cloud platforms have you worked with?
+Q: What cloud platforms has Harsh worked with?
 
-A: I have worked with AWS, Oracle Cloud Infrastructure (OCI), Render, and Vercel.
-
----
-
-Q: Which cloud platform are you most comfortable with?
-
-A: AWS because I completed the DevOps on AWS Specialization and built the Employee Directory project using multiple AWS services.
+A: Harsh has worked with AWS, Oracle Cloud Infrastructure (OCI), Render, and Vercel.
 
 ---
 
-Q: Which AWS services have you used?
+Q: Which cloud platform is Harsh most comfortable with?
+
+A: AWS, because Harsh completed the DevOps on AWS Specialization and built the Employee Directory project using multiple AWS services.
+
+---
+
+Q: Which AWS services has Harsh used?
 
 A: EC2, Lambda, API Gateway, DynamoDB, S3, Elastic Load Balancer (ELB), Auto Scaling, and CloudWatch.
 
@@ -22,7 +22,7 @@ A: Amazon EC2 provides virtual servers in the cloud that allow users to deploy a
 
 ---
 
-Q: Where did you use EC2?
+Q: Where did Harsh use EC2?
 
 A: In the Employee Directory project's traditional architecture deployment.
 
@@ -34,7 +34,7 @@ A: AWS Lambda is a serverless compute service that executes code without requiri
 
 ---
 
-Q: Where did you use Lambda?
+Q: Where did Harsh use Lambda?
 
 A: In the serverless architecture version of the Employee Directory project.
 
@@ -58,7 +58,7 @@ A: API Gateway acts as an entry point for APIs and routes requests to backend se
 
 ---
 
-Q: How did you use API Gateway in AWS?
+Q: How did Harsh use API Gateway in AWS?
 
 A: In the Employee Directory serverless architecture, API Gateway routed requests to Lambda functions.
 
@@ -82,7 +82,7 @@ A: Amazon S3 is an object storage service used to store files, media, and static
 
 ---
 
-Q: Where did you use S3?
+Q: Where did Harsh use S3?
 
 A: For static assets in the Employee Directory serverless deployment.
 
@@ -112,13 +112,13 @@ A: CloudWatch is AWS's monitoring and logging service.
 
 ---
 
-Q: How did you evaluate the two AWS architectures?
+Q: How did Harsh evaluate the two AWS architectures?
 
 A: Through stress testing, load testing, cost analysis, and scalability comparisons.
 
 ---
 
-Q: What was the outcome of your AWS project?
+Q: What was the outcome of Harsh's AWS project?
 
 A: The serverless architecture achieved more than 40% infrastructure cost reduction while maintaining equivalent functionality.
 
@@ -130,13 +130,13 @@ A: It is the process of reducing cloud expenses while maintaining performance an
 
 ---
 
-Q: What certification do you have related to cloud computing?
+Q: What certification does Harsh have related to cloud computing?
 
 A: Oracle Cloud Infrastructure 2025 AI Foundations Associate and DevOps on AWS Specialization.
 
 ---
 
-Q: What did you learn from the DevOps on AWS Specialization?
+Q: What did Harsh learn from the DevOps on AWS Specialization?
 
 A: Cloud deployment models, CI/CD pipelines, monitoring, automation, scalability, and cloud security.
 
@@ -178,7 +178,7 @@ A: Continuous Deployment automatically releases validated code changes to produc
 
 ---
 
-Q: What version control system do you use?
+Q: What version control system does Harsh use?
 
 A: Git.
 
@@ -190,7 +190,7 @@ A: Git enables version tracking, collaboration, rollback capability, and branch-
 
 ---
 
-Q: What Git workflow do you typically follow?
+Q: What Git workflow does Harsh typically follow?
 
 A: Feature branch development followed by pull requests and merging into the main branch.
 
@@ -208,9 +208,9 @@ A: Docker ensures consistent environments across development, testing, and deplo
 
 ---
 
-Q: Have you used Docker?
+Q: Has Harsh used Docker?
 
-A: Yes, I understand Docker concepts and use it for application packaging and deployment workflows.
+A: Yes, Harsh understands Docker concepts and uses it for application packaging and deployment workflows.
 
 ---
 
@@ -232,7 +232,7 @@ A: Render is a cloud platform used for deploying backend services.
 
 ---
 
-Q: What role does Render play in your chatbot?
+Q: What role does Render play in Harsh's chatbot?
 
 A: The FastAPI backend is planned to be deployed on Render.
 
@@ -244,7 +244,7 @@ A: Vercel is a cloud platform optimized for frontend deployments.
 
 ---
 
-Q: What role does Vercel play in your chatbot?
+Q: What role does Vercel play in Harsh's chatbot?
 
 A: The Angular frontend is planned to be deployed on Vercel.
 
@@ -256,12 +256,12 @@ A: Independent deployments improve scalability, maintainability, and deployment 
 
 ---
 
-Q: What are the most important cloud concepts you understand?
+Q: What are the most important cloud concepts Harsh understands?
 
 A: Scalability, fault tolerance, high availability, elasticity, serverless computing, monitoring, and cost optimization.
 
 ---
 
-Q: What cloud concept interests you most?
+Q: What cloud concept interests Harsh most?
 
 A: Designing scalable systems that balance performance, reliability, and cost efficiency.

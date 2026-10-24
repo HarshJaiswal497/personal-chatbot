@@ -1,22 +1,22 @@
-Q: Which project best represents your skills?
+Q: Which project best represents Harsh's skills?
 
-A: RunWay and my Personal AI Chatbot best represent my skills. RunWay demonstrates enterprise-level Full Stack development using Java, Spring Boot, Angular, microservices, JWT, RBAC, distributed transactions, and the Saga Pattern. The Personal AI Chatbot demonstrates my ability to learn and apply AI technologies including RAG, vector databases, embeddings, LLM integration, FastAPI, and Angular.
+A: RunWay and his Personal AI Chatbot best represent Harsh's skills. RunWay demonstrates enterprise-level Full Stack development using Java, Spring Boot, Angular, microservices, JWT, RBAC, distributed transactions, and the Saga Pattern. The Personal AI Chatbot demonstrates his ability to learn and apply AI technologies including RAG, vector databases, embeddings, LLM integration, FastAPI, and Angular.
 
 ---
 
 Q: Tell me about RunWay.
 
-A: RunWay is a fashion e-commerce platform built during my Cognizant internship. It follows a microservices architecture with six services: Auth, Catalog, Order, Payment, Engagement, and API Gateway. Each service has its own MySQL database. I was responsible for the Eureka Server, API Gateway, Catalog Service, and several Angular frontend modules.
+A: RunWay is a fashion e-commerce platform built during Harsh's Cognizant internship. It follows a microservices architecture with six services: Auth, Catalog, Order, Payment, Engagement, and API Gateway. Each service has its own MySQL database. Harsh was responsible for the Eureka Server, API Gateway, Catalog Service, and several Angular frontend modules.
 
 ---
 
-Q: What was your biggest challenge in RunWay?
+Q: What was Harsh's biggest challenge in RunWay?
 
-A: The biggest challenge was handling distributed transactions. Creating an order required coordination between Order, Catalog, and Payment services. We solved this using the Saga Orchestration Pattern where the Order Service acted as the orchestrator and executed compensation actions if a failure occurred.
+A: The biggest challenge was handling distributed transactions. Creating an order required coordination between Order, Catalog, and Payment services. The team solved this using the Saga Orchestration Pattern where the Order Service acted as the orchestrator and executed compensation actions if a failure occurred.
 
 ---
 
-Q: Why did you use Saga Pattern?
+Q: Why did Harsh use Saga Pattern?
 
 A: Traditional database transactions cannot span multiple independent microservice databases. Saga allows each service to perform a local transaction while maintaining overall consistency through compensating actions when failures occur.
 
@@ -28,9 +28,9 @@ A: Database-per-service improves service independence, scalability, fault isolat
 
 ---
 
-Q: Tell me about your Personal AI Chatbot.
+Q: Tell me about Harsh's Personal AI Chatbot.
 
-A: It is a RAG-powered portfolio assistant built using Angular 21, FastAPI, ChromaDB, Sentence Transformers, and Groq. Recruiters can ask questions about my profile and receive evidence-backed answers. It also includes confidence gating, a JD matcher, JWT-protected admin dashboard, and human-in-the-loop learning.
+A: It is a RAG-powered portfolio assistant built using Angular 21, FastAPI, ChromaDB, Sentence Transformers, and Groq. Recruiters can ask questions about Harsh's profile and receive evidence-backed answers. It also includes confidence gating, a JD matcher, JWT-protected admin dashboard, and human-in-the-loop learning.
 
 ---
 
@@ -42,7 +42,7 @@ A: Retrieval-Augmented Generation combines information retrieval with LLM genera
 
 Q: Why build a chatbot instead of a portfolio website?
 
-A: Traditional portfolios require recruiters to search manually. I wanted recruiters to ask natural-language questions and instantly receive relevant answers. The chatbot acts as an interactive portfolio.
+A: Traditional portfolios require recruiters to search manually. Harsh wanted recruiters to ask natural-language questions and instantly receive relevant answers. The chatbot acts as an interactive portfolio.
 
 ---
 
@@ -52,7 +52,7 @@ A: Confidence gating measures retrieval confidence before generating an answer. 
 
 ---
 
-Q: Why did you choose ChromaDB?
+Q: Why did Harsh choose ChromaDB?
 
 A: ChromaDB is lightweight, easy to integrate, open source, and well suited for RAG applications that require semantic retrieval and vector search.
 
@@ -60,17 +60,17 @@ A: ChromaDB is lightweight, easy to integrate, open source, and well suited for 
 
 Q: What is human-in-the-loop learning?
 
-A: Unanswered questions are stored and reviewed later. I manually provide answers, re-ingest them into the knowledge base, and improve the chatbot's future responses.
+A: Unanswered questions are stored and reviewed later. Harsh manually provides answers, re-ingests them into the knowledge base, and improve the chatbot's future responses.
 
 ---
 
 Q: Tell me about TechGranny.
 
-A: TechGranny is a Flutter and Firebase-based application designed to help senior citizens learn digital skills. It includes voice-guided tutorials, multilingual support, and appointment booking functionality. It is the project I am most proud of personally because it solves a meaningful real-world problem.
+A: TechGranny is a Flutter and Firebase-based application designed to help senior citizens learn digital skills. It includes voice-guided tutorials, multilingual support, and appointment booking functionality. It is the project Harsh is most proud of personally because it solves a meaningful real-world problem.
 
 ---
 
-Q: Why is TechGranny important to you?
+Q: Why is TechGranny important to Harsh?
 
 A: Many senior citizens struggle with technology despite increasing digital dependence. TechGranny was built to help bridge this gap and make technology more accessible.
 
@@ -84,7 +84,7 @@ A: GameHub is a React-based game discovery platform using the RAWG API. It suppo
 
 Q: Why move from React to Angular?
 
-A: My internship required Angular, and I found Angular's structured architecture very suitable for enterprise applications. However, I still understand React fundamentals and can work with React after a quick refresher.
+A: Harsh's internship required Angular, and he found Angular's structured architecture very suitable for enterprise applications. However, he still understands React fundamentals and can work with React after a quick refresher.
 
 ---
 
@@ -96,11 +96,11 @@ A: It is a machine learning project using Random Forest, SHAP, and symptom norma
 
 Q: Why Random Forest instead of XGBoost?
 
-A: Random Forest provided strong accuracy while integrating more naturally with the explainability requirements we had through SHAP.
+A: Random Forest provided strong accuracy while integrating more naturally with the project's explainability requirements through SHAP.
 
 Q: Which project required the most learning?
 
-A: My Personal AI Chatbot required the most learning because I had to quickly learn Python, FastAPI, RAG architecture, vector databases, embeddings, prompt engineering, ChromaDB, and Groq APIs while simultaneously designing and implementing the application.
+A: Harsh's Personal AI Chatbot required the most learning because he had to quickly learn Python, FastAPI, RAG architecture, vector databases, embeddings, prompt engineering, ChromaDB, and Groq APIs while simultaneously designing and implementing the application.
 
 ---
 
@@ -110,9 +110,9 @@ A: RunWay had the biggest technical complexity because it involved microservices
 
 ---
 
-Q: Which project are you most proud of?
+Q: Which project is Harsh most proud of?
 
-A: From a technical perspective, I am most proud of RunWay and my Personal AI Chatbot. From a personal perspective, I am most proud of TechGranny because it addresses a real-world social problem.
+A: From a technical perspective, Harsh is most proud of RunWay and his Personal AI Chatbot. From a personal perspective, he is most proud of TechGranny because it addresses a real-world social problem.
 
 ---
 
@@ -128,9 +128,9 @@ A: RunWay, AI-Based Symptom Diagnosis System, and TechGranny were team projects.
 
 ---
 
-Q: What was your exact contribution to RunWay?
+Q: What was Harsh's exact contribution to RunWay?
 
-A: I was responsible for Eureka Server, API Gateway, Catalog Service, product APIs, inventory APIs, media APIs, and multiple Angular frontend modules including Home Page, Category Page, Admin Dashboard, Seller Dashboard, Support Dashboard, Route Guards, and JWT Interceptor.
+A: Harsh was responsible for Eureka Server, API Gateway, Catalog Service, product APIs, inventory APIs, media APIs, and multiple Angular frontend modules including Home Page, Category Page, Admin Dashboard, Seller Dashboard, Support Dashboard, Route Guards, and JWT Interceptor.
 
 ---
 
@@ -146,7 +146,7 @@ A: Eureka Server acted as the service registry and enabled microservices to disc
 
 ---
 
-Q: Why did you use API Gateway?
+Q: Why did Harsh use API Gateway?
 
 A: API Gateway provided a single entry point for clients, simplified routing, centralized security, and improved maintainability of the microservices architecture.
 
@@ -158,19 +158,19 @@ A: OpenFeign is a declarative REST client used in Spring Boot microservices. It 
 
 ---
 
-Q: Why did you use OpenFeign?
+Q: Why did Harsh use OpenFeign?
 
 A: It reduced boilerplate code and simplified communication between microservices in RunWay.
 
 ---
 
-Q: Why did you choose Angular for RunWay?
+Q: Why did Harsh choose Angular for RunWay?
 
 A: Angular provides a structured architecture, dependency injection, built-in routing, guards, interceptors, and scalability, making it suitable for large enterprise applications.
 
 ---
 
-Q: Which Angular features did you use?
+Q: Which Angular features did Harsh use?
 
 A: Angular Signals, RxJS, Standalone Components, Lazy Loading, Route Guards, JWT Interceptor, and Role-Based UI rendering.
 
@@ -218,15 +218,15 @@ A: The Catalog Service manages products, inventory, categories, and media resour
 
 ---
 
-Q: What APIs did you build in Catalog Service?
+Q: What APIs did Harsh build in Catalog Service?
 
 A: Product management APIs, inventory APIs, media APIs, and supporting catalog-related endpoints.
 
 ---
 
-Q: What is the most unique feature of your chatbot?
+Q: What is the most unique feature of Harsh's chatbot?
 
-A: Human-in-the-loop learning. The chatbot can identify unanswered questions, allow me to answer them manually, and continuously improve its knowledge base.
+A: Human-in-the-loop learning. The chatbot can identify unanswered questions, allow Harsh to answer them manually, and continuously improve its knowledge base.
 
 ---
 
@@ -236,19 +236,19 @@ A: Semantic search retrieves information based on meaning rather than exact keyw
 
 ---
 
-Q: What embedding model do you use?
+Q: What embedding model does Harsh use?
 
 A: all-MiniLM-L6-v2 from Sentence Transformers.
 
 ---
 
-Q: Why did you choose all-MiniLM-L6-v2?
+Q: Why did Harsh choose all-MiniLM-L6-v2?
 
 A: It offers a strong balance between speed, embedding quality, and resource efficiency for RAG applications.
 
 ---
 
-Q: What chunking strategy do you use?
+Q: What chunking strategy does Harsh use?
 
 A: Chunk size of 300 with overlap of 50.
 
@@ -260,7 +260,7 @@ A: Overlap preserves context across chunk boundaries and improves retrieval qual
 
 ---
 
-Q: What vector database do you use?
+Q: What vector database does Harsh use?
 
 A: ChromaDB.
 
@@ -274,7 +274,7 @@ A: Large knowledge bases exceed context windows and become expensive. Retrieval 
 
 Q: What is the purpose of the JD Matcher?
 
-A: It helps recruiters compare job requirements against my profile and generates MATCH, PARTIAL MATCH, and GAP analysis.
+A: It helps recruiters compare job requirements against Harsh's profile and generates MATCH, PARTIAL MATCH, and GAP analysis.
 
 ---
 
@@ -284,7 +284,7 @@ A: It extracts requirements, retrieves supporting evidence from the knowledge ba
 
 ---
 
-Q: Why did you build the admin dashboard?
+Q: Why did Harsh build the admin dashboard?
 
 A: To manage unanswered questions, monitor chatbot behavior, and continuously improve the knowledge base.
 
@@ -296,7 +296,7 @@ A: Using JWT authentication and protected routes.
 
 ---
 
-Q: What rate limiting solution did you use?
+Q: What rate limiting solution did Harsh use?
 
 A: SlowAPI.
 
@@ -338,7 +338,7 @@ A: Healthcare professionals need to understand why a prediction was made before 
 
 ---
 
-Q: How did you handle symptom variations?
+Q: How did Harsh handle symptom variations?
 
 A: Through fuzzy matching and synonym mapping.
 
@@ -392,7 +392,7 @@ A: To allow senior citizens to receive personalized assistance when needed.
 
 ---
 
-Q: What did GameHub teach you?
+Q: What did GameHub teach Harsh?
 
 A: React fundamentals, API integration, caching, state management, and frontend performance optimization.
 
@@ -404,6 +404,6 @@ A: RAWG Video Game Database API.
 
 ---
 
-Q: Why is GameHub important in your learning journey?
+Q: Why is GameHub important in Harsh's learning journey?
 
-A: It was my first major frontend project and built the foundation that later helped me learn Angular quickly.
+A: It was Harsh's first major frontend project and built the foundation that later helped him learn Angular quickly.

@@ -1,57 +1,57 @@
-Q: Tell me about yourself.
+Q: Tell me about Harsh.
 
-A: I am Harsh Jaiswal, a final-year Computer Science and Engineering student at B.P. Poddar Institute of Management and Technology with a GPA of 9.24 and the distinction of being the overall B.Tech topper for three consecutive years. I have experience in Full Stack Development, AI/ML, and Cloud Technologies through projects, certifications, and my internship at Cognizant. During my internship, I worked on a microservices-based e-commerce platform where I contributed to the Eureka Server, API Gateway, Catalog Service, and several Angular frontend modules. I have also built projects such as a Personal AI Chatbot using RAG, an AI-Based Symptom Diagnosis System, TechGranny, GameHub, and a scalable AWS Employee Directory. I enjoy solving problems, learning new technologies, and building products that create real value for users.
-
----
-
-Q: What are your strengths?
-
-A: My biggest strengths are my learning agility, adaptability, and problem-solving mindset. I can learn new technologies quickly and apply them to practical projects. For example, while building my Personal AI Chatbot, I learned Python, FastAPI, RAG, vector databases, and LLM integration in a short period and successfully built a working solution. I am also disciplined, self-motivated, and comfortable working both independently and in teams.
+A: Harsh Jaiswal is a final-year Computer Science and Engineering student at B.P. Poddar Institute of Management and Technology with a GPA of 9.24 and the distinction of being the overall B.Tech topper for three consecutive years. He has experience in Full Stack Development, AI/ML, and Cloud Technologies through projects, certifications, and his internship at Cognizant. During his internship, he worked on a microservices-based e-commerce platform where he contributed to the Eureka Server, API Gateway, Catalog Service, and several Angular frontend modules. He has also built projects such as a Personal AI Chatbot using RAG, an AI-Based Symptom Diagnosis System, TechGranny, GameHub, and a scalable AWS Employee Directory. He enjoys solving problems, learning new technologies, and building products that create real value for users.
 
 ---
 
-Q: What is your biggest weakness?
+Q: What are Harsh's strengths?
 
-A: One area I continuously work on is that I enjoy learning many new technologies, which can sometimes make me spread my attention across multiple topics. To address this, I have improved my prioritization and time management skills so I can deepen my expertise in important areas while still exploring new technologies in a structured manner.
-
----
-
-Q: Why should we hire you?
-
-A: I bring a strong combination of academic excellence, practical project experience, and a willingness to learn. I have experience across Full Stack Development, AI/ML, Cloud Computing, and modern software engineering practices. I learn quickly, adapt to new technologies, and enjoy solving challenging problems. I believe I can contribute effectively from the beginning while continuing to grow within the organization.
+A: Harsh's biggest strengths are his learning agility, adaptability, and problem-solving mindset. He can learn new technologies quickly and apply them to practical projects. For example, while building his Personal AI Chatbot, he learned Python, FastAPI, RAG, vector databases, and LLM integration in a short period and successfully built a working solution. He is also disciplined, self-motivated, and comfortable working both independently and in teams.
 
 ---
 
-Q: What is your biggest failure?
+Q: What is Harsh's biggest weakness?
 
-A: One experience that had a significant impact on me was getting rejected in the final round of an interview process early in my placement journey. At the time it was disappointing, but it taught me valuable lessons about interview preparation, communication, staying calm under pressure, and understanding what companies look for beyond technical skills. Since then, I have worked continuously on improving both my technical and interpersonal abilities.
-
----
-
-Q: How do you manage your time?
-
-A: I use prioritization and planning. During examination periods I focus more heavily on academics, while during breaks and lighter academic schedules I dedicate more time to projects, competitive programming, certifications, and learning new technologies. This structured approach helped me maintain a 9.24 GPA while simultaneously building projects, completing certifications, and participating in internships and leadership programs.
+A: One area Harsh continuously works on is that he enjoys learning many new technologies, which can sometimes make him spread his attention across multiple topics. To address this, he has improved his prioritization and time management skills so he can deepen his expertise in important areas while still exploring new technologies in a structured manner.
 
 ---
 
-Q: Which project are you most proud of?
+Q: Why should a company hire Harsh?
 
-A: From a technical perspective, I am most proud of RunWay and my Personal AI Chatbot because they demonstrate advanced concepts such as microservices, distributed transactions, RAG, and AI integration. From a personal perspective, I am most proud of TechGranny because it addresses a real-world problem by helping senior citizens become more comfortable with digital technology.
-
----
-
-Q: Where do you see yourself in five years?
-
-A: In five years, I see myself as a highly capable software engineer with strong expertise in Full Stack Development, AI systems, and software architecture. I hope to contribute to impactful products, take ownership of larger technical challenges, and mentor junior engineers while continuing to learn and grow.
+A: Harsh brings a strong combination of academic excellence, practical project experience, and a willingness to learn. He has experience across Full Stack Development, AI/ML, Cloud Computing, and modern software engineering practices. He learns quickly, adapts to new technologies, and enjoys solving challenging problems. He believes he can contribute effectively from the beginning while continuing to grow within the organization.
 
 ---
 
-Q: Are you willing to relocate?
+Q: What is Harsh's biggest failure?
 
-A: Yes. I am open to relocating anywhere in India for the right opportunity and am comfortable working in cities such as Bangalore, Hyderabad, Pune, Chennai, Mumbai, Gurgaon, Noida, or Kolkata.
+A: One experience that had a significant impact on Harsh was getting rejected in the final round of an interview process early in his placement journey. At the time it was disappointing, but it taught him valuable lessons about interview preparation, communication, staying calm under pressure, and understanding what companies look for beyond technical skills. Since then, he has worked continuously on improving both his technical and interpersonal abilities.
 
 ---
 
-Q: What motivates you?
+Q: How does Harsh manage his time?
 
-A: I am motivated by continuous improvement and the opportunity to build useful products that solve real problems. I enjoy learning new technologies, taking on challenging projects, and becoming a better version of myself professionally, mentally, and personally.
+A: Harsh uses prioritization and planning. During examination periods he focuses more heavily on academics, while during breaks and lighter academic schedules he dedicates more time to projects, competitive programming, certifications, and learning new technologies. This structured approach helped him maintain a 9.24 GPA while simultaneously building projects, completing certifications, and participating in internships and leadership programs.
+
+---
+
+Q: Which project is Harsh most proud of?
+
+A: From a technical perspective, Harsh is most proud of RunWay and his Personal AI Chatbot because they demonstrate advanced concepts such as microservices, distributed transactions, RAG, and AI integration. From a personal perspective, he is most proud of TechGranny because it addresses a real-world problem by helping senior citizens become more comfortable with digital technology.
+
+---
+
+Q: Where does Harsh see himself in five years?
+
+A: In five years, Harsh sees himself as a highly capable software engineer with strong expertise in Full Stack Development, AI systems, and software architecture. He hopes to contribute to impactful products, take ownership of larger technical challenges, and mentor junior engineers while continuing to learn and grow.
+
+---
+
+Q: Is Harsh willing to relocate?
+
+A: Yes. Harsh is open to relocating anywhere in India for the right opportunity and is comfortable working in cities such as Bangalore, Hyderabad, Pune, Chennai, Mumbai, Gurgaon, Noida, or Kolkata.
+
+---
+
+Q: What motivates Harsh?
+
+A: Harsh is motivated by continuous improvement and the opportunity to build useful products that solve real problems. He enjoys learning new technologies, taking on challenging projects, and becoming a better version of himself professionally, mentally, and personally.
