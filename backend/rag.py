@@ -8,7 +8,7 @@ Handles:
   - Streaming answer generation via Groq
   - Non-streaming answer generation
   - JD matching feature
-  - Confidence gating (threshold: 0.45)
+  - Confidence gating (threshold: 0.35 cosine similarity)
   - Conversation history injection
 
 Loaded once at module import — shared across all FastAPI requests.
@@ -26,9 +26,10 @@ load_dotenv()
 # ── Config ────────────────────────────────────────────────────────────────────
 CHROMA_PATH          = "chroma_db"
 COLLECTION_NAME      = "harsh_knowledge"
-CONFIDENCE_THRESHOLD = 0.45   # below this → "I don't know"
+CONFIDENCE_THRESHOLD = 0.35   # cosine similarity; below this → "I don't know"
 TOP_K                = 8      # number of chunks to retrieve per query
-MODEL_NAME           = "llama-3.1-8b-instant"
+MODEL_NAME           = "openai/gpt-oss-20b"   # Groq retired its Llama chat models
+MODEL_EXTRA          = {"reasoning_effort": "low"}  # reasoning tokens count against max_tokens
 MAX_HISTORY_TURNS    = 3      # how many past exchanges to inject (3 = last 3 Q&A pairs)
 
 
@@ -116,11 +117,11 @@ print("RAG: Ready.")
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def _cosine_score(distance: float) -> float:
     """
-    ChromaDB returns L2 distance by default when using cosine metadata.
-    Convert to a 0–1 similarity score: score = 1 / (1 + distance).
+    The collection uses hnsw:space=cosine, so Chroma returns cosine distance
+    (1 - cosine_similarity). Convert back to similarity: score = 1 - distance.
     Higher is better.
     """
-    return round(1 / (1 + distance), 4)
+    return round(1 - distance, 4)
 
 
 def retrieve(query: str) -> tuple[list[str], list[float], list[dict]]:
@@ -251,6 +252,7 @@ def answer(query: str, history: list[dict] = []) -> dict:
 
     response = _groq.chat.completions.create(
         model=MODEL_NAME,
+        extra_body=MODEL_EXTRA,
         messages=messages,
         temperature=0.3,
         max_tokens=400,
@@ -273,7 +275,7 @@ def answer_stream(query: str, history: list[dict] = []) -> Generator[dict, None,
     Streaming answer generator. Yields event dicts consumed by FastAPI's StreamingResponse.
 
     Event types:
-        {"type": "no_answer", "score": float}           — below confidence threshold
+        {"type": "no_answer", "score": float}           — below confidence threshold, or model said I_DONT_KNOW
         {"type": "token",     "token": str, "score": float}  — each streamed token
         {"type": "done",      "sources": list, "score": float} — stream complete
     """
@@ -296,16 +298,43 @@ def answer_stream(query: str, history: list[dict] = []) -> Generator[dict, None,
 
     stream = _groq.chat.completions.create(
         model=MODEL_NAME,
+        extra_body=MODEL_EXTRA,
         messages=messages,
         temperature=0.3,
         max_tokens=400,
         stream=True,
     )
 
+    # Hold tokens back while the output could still be the I_DONT_KNOW sentinel,
+    # so it is never streamed to the user. Once it diverges, flush and stream live.
+    sentinel = "I_DONT_KNOW"
+    buffer   = ""
+    flushed  = False
+
     for chunk in stream:
-        token = chunk.choices[0].delta.content or ""
-        if token:
+        token = chunk.choices[0].delta.content if chunk.choices else None
+        if not token:
+            continue
+        if flushed:
             yield {"type": "token", "token": token, "score": best_score}
+            continue
+
+        buffer += token
+        head = buffer.lstrip()
+        if head.startswith(sentinel):
+            yield {"type": "no_answer", "score": best_score}
+            return
+        if not sentinel.startswith(head):
+            flushed = True
+            yield {"type": "token", "token": buffer, "score": best_score}
+
+    if not flushed:
+        if buffer.strip():
+            yield {"type": "token", "token": buffer, "score": best_score}
+        else:
+            # Empty completion — treat like an unanswerable question
+            yield {"type": "no_answer", "score": best_score}
+            return
 
     yield {"type": "done", "sources": sources, "score": best_score}
 
@@ -326,6 +355,7 @@ def jd_match(jd_text: str) -> dict:
     # Step 1: Extract top requirements from JD
     req_response = _groq.chat.completions.create(
         model=MODEL_NAME,
+        extra_body=MODEL_EXTRA,
         messages=[{
             "role": "user",
             "content": (
@@ -354,6 +384,7 @@ def jd_match(jd_text: str) -> dict:
     # Step 3: Generate MATCH/PARTIAL/GAP analysis
     analysis_response = _groq.chat.completions.create(
         model=MODEL_NAME,
+        extra_body=MODEL_EXTRA,
         messages=[
             {
                 "role": "system",

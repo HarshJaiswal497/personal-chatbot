@@ -46,6 +46,9 @@ app = FastAPI(
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
+# Serialises background re-ingests triggered by answering gaps
+_reingest_lock = threading.Lock()
+
 # CORS — allow Angular dev server and production domain
 app.add_middleware(
     CORSMiddleware,
@@ -281,11 +284,13 @@ def answer_gap(body: AnswerGapRequest, payload: dict = Depends(verify_token)):
             g["answered_at"] = datetime.now().isoformat()
     _save_gaps(gaps)
 
-    # Background re-ingest — bot learns without restarting the server
+    # Background re-ingest — bot learns without restarting the server.
+    # Reuses rag's model/client and upserts in place, so rag._collection stays valid.
     def reingest():
         try:
             import ingest
-            ingest.ingest()
+            with _reingest_lock:
+                ingest.ingest(model=rag._model, client=rag._client)
             print(f"[reingest] ✓ Re-ingested after answering: '{gap['question']}'")
         except Exception as e:
             print(f"[reingest] ERROR: {e}")

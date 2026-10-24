@@ -41,29 +41,33 @@ def chunk_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) 
 
 
 # ── Main Ingest ───────────────────────────────────────────────────────────────
-def ingest():
+def ingest(model: SentenceTransformer | None = None, client=None):
+    """
+    Pass `model` and `client` to reuse ones already loaded (the running server does
+    this). The collection is updated in place, never deleted, so open handles to it
+    (e.g. rag._collection) stay valid.
+    """
     print("=" * 60)
     print("  Harsh Jaiswal Chatbot — Knowledge Base Ingestion")
     print("=" * 60)
 
     # 1. Load embedding model (downloads ~90MB on first run, cached after)
     print("\n[1/4] Loading embedding model (all-MiniLM-L6-v2)...")
-    print("      First run downloads ~90MB — this is normal and only happens once.")
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    if model is None:
+        print("      First run downloads ~90MB — this is normal and only happens once.")
+        model = SentenceTransformer("all-MiniLM-L6-v2")
     print("      ✓ Model loaded.")
 
-    # 2. Set up ChromaDB (wipe and recreate for clean re-ingest)
+    # 2. Set up ChromaDB (reuse the existing collection; upsert below)
     print("\n[2/4] Setting up ChromaDB...")
-    client = chromadb.PersistentClient(path=CHROMA_PATH)
-    try:
-        client.delete_collection(COLLECTION_NAME)
-        print("      ✓ Cleared previous collection.")
-    except Exception:
-        print("      ✓ No previous collection found — starting fresh.")
-    collection = client.create_collection(
+    if client is None:
+        client = chromadb.PersistentClient(path=CHROMA_PATH)
+    collection = client.get_or_create_collection(
         name=COLLECTION_NAME,
         metadata={"hnsw:space": "cosine"}   # use cosine similarity
     )
+    existing_ids = set(collection.get(include=[])["ids"])
+    print(f"      ✓ Collection ready ({len(existing_ids)} existing chunks).")
 
     # 3. Read and chunk all knowledge files
     print("\n[3/4] Reading knowledge files...")
@@ -104,12 +108,18 @@ def ingest():
         batch_size=32
     ).tolist()
 
-    collection.add(
+    collection.upsert(
         documents=all_chunks,
         embeddings=embeddings,
         ids=all_ids,
         metadatas=all_meta,
     )
+
+    # Remove chunks whose file was deleted or shrank since the last ingest
+    stale_ids = list(existing_ids - set(all_ids))
+    if stale_ids:
+        collection.delete(ids=stale_ids)
+        print(f"      ✓ Removed {len(stale_ids)} stale chunks.")
 
     print("\n" + "=" * 60)
     print(f"  ✓ SUCCESS: {len(all_chunks)} chunks stored in ChromaDB.")
